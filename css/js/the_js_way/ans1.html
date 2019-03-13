@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<body>
+        <h1>Some musical instruments</h1>
+        <ul>
+          <li id="clarinet" class="wind woodwind">
+            The <a href="https://en.wikipedia.org/wiki/Clarinet 
+      
+      ">clarinet</a>
+          </li>
+          <li id="saxophone" class="wind woodwind">
+            The <a href="https://en.wikipedia.org/wiki/Saxophone 
+      
+      ">saxophone</a>
+          </li>
+          <li id="trumpet" class="wind brass">
+            The <a href="https://en.wikipedia.org/wiki/Trumpet 
+      
+      ">trumpet</a>
+          </li>
+          <li id="violin" class="chordophone">
+            The <a href="https://en.wikipedia.org/wiki/Violin 
+      
+      ">violin</a>
+          </li>
+          <li id="harpsichord">
+            The <a href="https://en.wikipedia.org/wiki/Harpsichord 
+      
+      ">harpsichord</a>
+          </li>
+        </ul>
+<script>
+    function linkInfo(){
+        //打印多少个a标签，第一个标签href，最后一个标签href
+        const links = document.getElementsByTagName("a");
+        console.log(links.length);
+        if (!links.length) return;
+        console.log(links[0].href);
+        console.log(links[links.length-1].href);
+    }
+    linkInfo();
+</script>      
+</body>
+</html>

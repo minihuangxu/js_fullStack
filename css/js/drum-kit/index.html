@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet"
+    href="./style.css">
+<div class="keys">
+    <div class="key playing"data-key="65">
+      <div>A</div>
+      <span class="sound">clap</span>
+    </div>
+    <div class="key"data-key="83">
+      <div>S</div>
+      <span class="sound">hihat</span>
+    </div>
+    <div class="key"data-key="68">
+      <div>D</div>
+      <span class="sound">kick</span>
+    </div>
+    <div class="key"data-key="70">
+      <div>F</div>
+      <span class="sound">openhat</span>
+    </div>
+    <div class="key"data-key="71">
+      <div>G</div>
+      <span class="sound">boom</span>
+    </div>
+    <div class="key"data-key="72">
+      <div>H</div>
+      <span class="sound">ride</span>
+    </div>
+    <div class="key"data-key="74">
+      <div>J</div>
+      <span class="sound">snare</span>
+    </div>
+    <div class="key"data-key="75">
+      <div>K</div>
+      <span class="sound">tom</span>
+    </div>
+    <div class="key"data-key="76">
+      <div>L</div>
+      <span class="sound">tink</span>
+</div>
+<audio data-key="65" src="./sounds/clap.wav"></audio>
+<audio data-key="83"src="./sounds/hihat.wav"></audio>
+<audio data-key="68"src="./sounds/kick.wav"></audio>
+<audio data-key="70"src="./sounds/openhat.wav"></audio>
+<audio data-key="71"src="./sounds/boom.wav"></audio>
+<audio data-key="72"src="./sounds/ride.wav"></audio>
+<audio data-key="74"src="./sounds/snare.wav"></audio>
+<audio data-key="75"src="./sounds/tom.wav" ></audio>
+<audio data-key="76"src="./sounds/tink.wav"></audio>
+</body>
+<script>
+  const clapSound = 
+  document.querySelector("audio");
+  console.log(clapSound);
+  const keys = 
+  document.querySelectorAll(".keys");
+  console.log(keys);
+  function playSound(e){
+   console.log(e.keyCode);
+  // clapSound.play();
+   //播放相应的声音
+   //根据键值得到audio
+   const audio = 
+   document.querySelector("audio[data-key='"+e.keyCode+"']");
+   //console.log(audio);
+   const key = 
+   document.querySelector(
+       "div[data-key='" + e.keyCode + "']")
+   if(!audio) return;
+   audio.play();
+   key.classList.add('playing');
+   setTimeout(() => {
+       key.classList.remove('playing');
+   },20)
+  }
+  window.addEventListener('keydown',playSound)
+</script>
+
+</html>

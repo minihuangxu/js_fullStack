@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>前端是工程师中的导演-星球大战</title>
+<style>
+   * {  /*样式的重置*/
+   margin: 0;
+   padding: 0;
+   }
+   body {
+      background: url(./images/bg.jpg); 
+   }
+   .starwars-demo{
+       height:17em;
+       width:34em;
+       position: absolute;/*绝对定位于中间*/
+       left:50%;
+       top:50%;
+       transform:translate(-50%,-50%);/*变形*/   
+       perspective: 800px;
+       transform-style:preserve-3d;   
+   }
+   .star, .wars{
+     position: absolute ;
+   }
+   .star{
+       top: -0.75em;
+       /*动作导演*/
+       animation:star 10s ease-out infinite;
+   }
+   @keyframes star{
+       0%{
+        opacity: 0;
+        transform: scale(1.5);
+       }
+       20%{
+        opacity: 1;
+       }
+       89%{
+           opacity: 1;
+           transform: scale(1);
+       }
+       100%{
+           opacity: 0;
+           transform: translateZ(-40em);
+       }
+   }
+   .wars{
+       bottom: -0.5em;
+       animation: wars 10s ease-out infinite;
+   }
+   @keyframes wars{
+       0%{
+          opacity: 0;
+          transform: scale(1.5)
+       }
+       20%{
+           opacity: 1;
+       }
+       90%{
+           opacity: 1;
+           transform: scale(1);
+       }
+       100%{
+           opacity: 0;
+           transform: translateZ(-400em);
+       }
+   }
+</style>
+
+</head>
+<body>
+    <div class="starwars-demo">
+      <img src="./images/star.svg" alt="" class="star">
+         <img src="./images/wars.svg" alt="" class="wars">
+    </div>
+</body>
+</html>

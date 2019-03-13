@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>talk in js-代理模式</title>
+</head>
+<body>
+<script>
+    //object
+    //描述的对象是怎样的就出来了
+    //对象字面量 JSON Object
+    const hx={
+      name:'黄旭',
+      age:21,
+      single:true,
+      hometown:'抚州',
+      yz:101,
+      room:1121,
+      //上面的属性
+      //函数功能 行为
+      //target 形参
+      sendFlower:function(target){
+      //console.log(target.name);
+      target.receiveFlower(hx);
+    }
+    };
+    const mini={
+      name:'杨幂',
+      age:16,
+      mood:50,
+      receiveFlower:function(sender){
+          //如果mood>80 收花，否则拒绝 if/else
+          if(mini.mood<80){
+              console.log('没空，快滚！！！');
+          }else{
+              console.log('你就是老娘的备胎');
+          }
+          console.log('收到了花');
+      },
+      listenGoodMood:function(){
+          //心情不好
+         // console.log('本女王命令你退下')
+          setTimeout(function(){
+             //console.log('本女王的心情变好了');
+             mini.receiveFlower();
+           } ,3000);
+      }
+    };
+    //送花 A->C->B
+    //A 送花 send_flower
+    //B 收花 receive_flower
+    //C 收花 转送给B
+
+    const bjt={
+        name:'白敬亭',
+        //与杨幂实现了同样的接口
+        receiveFlower:function(sender){
+            /*if(sender.name=='黄旭'){
+                console.log('让我们在一起吧!!!');
+            }else{
+                mini.receiveFlower();
+            }*/
+            mini.listenGoodMood(function(){
+            
+            })
+        }
+   }
+</script>    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<sc>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var name="黄旭";
+    //var dl=null;
+    function dlName(){
+        //函数局部作用域
+        //函数运行时诞生
+        var dl="黄旭";
+        //运行结束后回收
+    }
+    //块级作用域
+    if (true) {
+        const cxygls = "mini";
+    }
+    for(let i=0;i<10;i++){
+        console.log(i);
+        setTimeout(function() {
+            console.log('The number is'+i);
+        }, 1000);
+    }
+    console.log(cxygls);
+    /*console.log(name);*/
+    </script>
+</body>
+</html>
