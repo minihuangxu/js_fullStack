@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 37.5px;
+}
+body{
+    font-size: .18rem;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+.swiper-container{
+    width: 100%;
+    height:100%;
+}  
+/* p1 */
+.p1{
+    background-color: #ff1224;
+}
+.p1 .light,.slogon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.p1 .light{
+    width: 7.73rem;
+    height: 10.49rem;
+    background: url(http://wqs.jd.com/promote/201707/2018campus/img/p1-light_7df180.png )no-repeat;
+    background-size: 100% auto;
+    margin-left: -3.26rem;
+    margin-top: -5.2rem;
+}
+.p1.swiper-slide-active .slogon{
+    animation: fadeInup .5s .3s both;
+}
+@keyframes fadeInup{
+    0%{
+        opacity: 0;
+        transform: translate3d(0,100%,0);
+    }
+    100%{
+        opacity: 1;
+        transform: none; 
+    }
+}
+.p1 .slogon{
+    width: 2.74rem;
+    height: 2.44rem;
+    background-image: url(http://wqs.jd.com/promote/201707/2018campus/img/sprite.text_2b7b0a.png);
+    background-position: -5.38rem 0;
+    margin-left: -1.7rem;
+    margin-top: -1.68rem;
+    background-size: 51.58rem 2.44rem;
+    text-indent: -133.32rem;
+}
+/* slide-p2 */
+.p2 .bg{
+    position: absolute;
+    left: 0;
+}
+.p2 .bg{
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: url(http://wqs.jd.com/promote/201707/2018campus/img/bg-scene-01_9c56fc.jpg)
+    no-repeat bottom;
+    background-size: 100% auto;
+}
