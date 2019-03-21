@@ -58,7 +58,7 @@ html, body{
     text-indent: -133.32rem;
 }
 /* slide-p2 */
-.p2 .bg{
+.p2 .bg, .p2 .light{
     position: absolute;
     left: 0;
 }
@@ -69,4 +69,124 @@ html, body{
     background: url(http://wqs.jd.com/promote/201707/2018campus/img/bg-scene-01_9c56fc.jpg)
     no-repeat bottom;
     background-size: 100% auto;
+}
+.p2 .light{
+    bottom: 0;
+    width: 8.7rem;
+    height: 15.14rem;
+    margin-left: -0.533em;
+    margin-bottom: -1.6rem;
+    background: url(http://wqs.jd.com/promote/201707/2018campus/img/light-scene-01_bd4007.png)
+    no-repeat;
+    background-size: 100% auto;
+}
+.p2 .dog{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -1.8rem;
+    width: 3.6rem;
+    height: 3.6rem;
+    margin-top: -1.8rem;
+    background: url(http://wqs.jd.com/promote/201707/2018campus/img/dog-scene-01_8098ad.png) no-repeat;
+    background-size: 100% auto;
+}
+.p2 .text-top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1.2rem;
+    margin-top: 1.6rem;
+}
+.p2 .text{
+    text-indent: -133rem;
+}
+.p2 .text-top{
+    width: 1.58rem;
+    height: 0.56rem;
+    background: url(http://wqs.jd.com/promote/201707/2018campus/img/sprite.scene_c9deac.png);
+    background-position: -4.05rem 0;
+    margin-top: 4.26rem;
+}
+.p2 .text-top, .p2 .text-bottom{
+    background-size: 32.49rem 2.26rem;
+}
+.p2 .text-bottom{
+    width: 3.4rem;
+    height: 1.85rem;
+    background-image: url(http://wqs.jd.com/promote/201707/2018campus/img/sprite.scene_c9deac.png);
+    background-position: -19.33rem 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: 1.2rem;
+    margin-bottom: 1.33rem;
+}
+/* p8 */
+.p8{
+    background-color: #ff1e00;
+}
+.p8 .logo-ran, .p8 .text-slogon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-indent: -133.32rem;
+    margin-left: 0.85333rem;
+}
+.p8.swiper-slide-active .logo-ran{
+   animation:fadeInRight .5s .3s both;
+}
+.p8.swiper-slide-active .text-slogon{
+    animation:fadeInRight .5s .4s both;
+ }
+ .p8.swiper-slide-active .text-detail{
+    animation:fadeInRight .5s .7s both;
+ }
+ .p8.swiper-slide-active .text-title{
+    animation:fadeInRight .5s .6s both;
+ }
+.p8 .logo-ran{
+    width: 1.9rem;
+    height: 1.73rem;
+    background-image:url(http://wqs.jd.com/promote/201707/2018campus/img/sprite.other_5adc1e.png);
+    background-position: -3.028rem 0;
+    margin-top: 1.6rem;
+    background-size: 14.56rem 4.64rem;
+}
+.p8 .text-slogon{
+    width: 5.7333rem;
+    height: 1.9733rem;
+    background-image:  url(http://wqs.jd.com/promote/201707/2018campus/img/sprite.text_2b7b0a.png);
+    background-position: -31.73rem 0;
+    margin-top: 5.6533rem;
+    background-size: 51.58rem 2.44rem;
+}
+.p8 .text-detail, .p8 .text-title{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: .85rem;
+    color: #fff;
+}
+.p8 .text-title{
+    margin-top: 9.38rem;
+    width: auto;
+    height: auto;
+    font-size: .45rem;
+    background: none;
+}
+.p8 .text-detail{
+    margin-top: 10.26rem;
+    font-style: 0.266em;
+    line-height: 1.8;
+}
+@keyframes fadeInRight{
+    0%{
+        opacity: 0;
+        transform: translate3d(50%,0,0);
+    }
+    100%{
+        opacity: 1;
+        transform: none;
+    }  
 }

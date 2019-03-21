@@ -264,3 +264,12 @@
   color: #ffffff;
   border-radius: 25px;
 }
+.button1::before{
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: relative;
+  display: inline-block;
+  background: url(./edit.png)  no-repeat;
+  background-size: contain;
+ }
