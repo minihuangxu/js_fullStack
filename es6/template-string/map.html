@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //   for(let i=0;i<arr.length;i++) {
+        //       console.log(arr[i]);
+        //   }
+        // arr.forEach(function (school) {
+        //     console.log(school);
+        // });
+        const arr = ['ECUT', '江财'];
+        //1 创建一个新的数组
+        //2 每一项都是回调函数返回的结果
+        // const newArr = arr.map(function(school){
+        //     // return true;
+        //     return '<p>'+ school+'</p>';
+        // });
+    //     ['<p>ECUT</p>', '<p>江财</p>']    
+    //join()会把数组的每一项拼起来成为字符串 返回字符串    
+        var string = arr.map(function(school){
+            return school + '不好';
+        })
+        .join('+');
+     </script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+/* reset */
+body, div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, blockquote{
+    margin: 0;
+    padding: 0;
+}
+a:link{
+    text-decoration: none;
+    color: #3377aa;
+}
+a:visited{
+    color: #666699;
+    text-decoration: none;
+}
+a:hover{
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #3377aa;
+}
+img{
+    border: 0;
+}
+a img{
+    border-width: 0;
+    vertical-align: middle;
+}
+/* 通用样式 */
+h1,h2,h3,h4,h5,h6{
+    font-size: 100%;
+    font-weight: normal;
+}
+h2{
+    font: 15px Arail,sans-serif;
+    color: #007722;
+    margin: 0 0 12px 0;
+    line-height: 150%;
+}
+.mod{
+     margin-bottom: 30px;
+}
+.section{
+    padding: 10px 0;
+    margin-bottom: 30px;
+    min-width: 200px;
+}
+.wrapper{
+    width: 950px;
+    margin: 0 auto;
+}
+.section .side{
+    float: right;
+    width: 265px;
+    margin-left: 30px;
+    height: 200px;
+    background-color: red;
+}
+.section .main{
+    height: 200px;
+    background-color: green;
+    overflow: hidden;
+}
+/* 组件 */
+.pl{
+    font:12px Arail, sans-serif;
+    line-height: 150%;
+    color: #666666;
+}

@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+.cat{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: linear-gradient(
+      60deg,
+      #aaeeff,
+      #0ee8f8 73%,
+      #6d7bfa
+    )
+}
+.shenti{
+    height:201px;
+    width: 117px;
+    position: absolute;
+    background: url(./cat/maoshenti.png) no-repeat;
+    background-size:100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+}
+.maowei{
+    width: 64px;
+    height: 194px;
+    position: absolute;
+    background: url(./cat/maowei.png) no-repeat;
+    background-size: 100%;
+    top: -184px;
+    left: -8px;
+    transform-origin: 40% 96%;
+    animation: ani_maowei 3s ease-in-out infinite;
+  }
+  @keyframes ani_maowei {
+    0% {
+      transform: rotate(-5deg);
+    }
+    50% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(-5deg);
+    }
+}
+.maozhua{
+    width: 34px;
+    height: 81px;
+    position: absolute;
+    background: url(./cat/maozhua.png) no-repeat;
+    background-size: 100%;
+    top: 190px;
+    left: 66px;
+    z-index: 1;
+    transform-origin: 60% 4%;
+    animation: ani_maozhua 3s ease-in-out infinite;
+  }
+  @keyframes ani_maozhua {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(-11deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+}
+.maoyan1{
+    width: 3px;
+    height: 3px;
+    position: absolute;
+    background: url(./cat/maoyan1.png) no-repeat;
+    background-size: 100%;
+    top:178px;
+    left:76px;
+    z-index: 3;
+}
+.maoyan2{
+    width: 3px;
+    height: 3px;
+    position: absolute;
+    background: url(./cat/maoyan2.png) no-repeat;
+    background-size: 100%;
+    top:180px;
+    left:96px;
+    z-index: 3;
+}
+.maozui{
+    width: 4px;
+    height: 3px;
+    position: absolute;
+    background: url(./cat/maozui.png) no-repeat;
+    background-size: 100%;
+    top:188px;
+    left:85px;
+    z-index: 3;
+}

@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #f2f2f2;
+}
+header{
+    background: url(./images/图层\ 1.png) 0 0 no-repeat;
+    background-size: 100%;
+}
+header .mask{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.7);
+    overflow: hidden;
+}
+header .content{
+    width: 970px;
+    margin: 208px auto 0;
+    color: rgba(255,255,255,.7);
+}
+/* hello world 容器 */
+.hello .title{
+    font-size:62px;
+    font-weight:200;
+    color:rgba(255,255,255,1);
+    line-height:72px;
+    text-align: center;
+}
+.hello .text{
+    font-size:20px;
+    font-weight:200;
+    color:rgba(255,255,255,1);
+    line-height:32px;
+    opacity:0.7;
+    width: 766px;
+    margin: 86px auto 0;
+    text-align: center;
+}
+/* 表单 */
+.create{
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid rgba(255,255,255,.3);
+    border-radius: 2px;
+    margin-top: 104px;
+    padding: 61px 100px 52px;
+}
+.create .title{
+    text-align: center;
+    font-size: 16px;
+    line-height: 28px;
+}
+.create .profile{
+    text-align: center;
+    font-size: 12px;
+    color: rgba(255,255,255,.3);
+    margin: 19px auto 45px;
+}
+.create .input input{
+    outline: none;
+    border: 1px solid rgba(255,255,255,.2);
+    width: 292px;
+    height: 50px;
+    background: rgba(0,0,0,0);
+    border-radius: 2px;
+    color: #fff;
+    text-indent: 22px;
+}
+.content .input{
+    display: flex;
+    justify-content: space-between;
+}
+.create .input input[type="button"]{
+    width: 125px;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    text-indent: 0;
+}
+.introduce{
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+.introduce-content{
+    text-align: center;
+    padding-top: 79px;
+}
+.introduce-content .title{
+    color: rgba(0,0,0,0);
+    font-size: 14px;
+}
+.introduce-content .text{
+    width:657px;
+    font-size:42px;
+    font-weight:200;
+    color:rgba(20,20,20,1);
+    line-height:52px;
+    margin: 39px auto 0;
+}
+.introduce .section{
+    width: 986px;
+    margin: 85px auto 0;
+    padding-bottom: 102px;
+}
+.section .option{
+    box-sizing: border-box;
+    display: flex;   
+}
+.section .option .icon{
+    margin-right: 31px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.section .option .icon.iphoneicon{
+    width: 30px;
+    height: 49px;
+    background-image: url(./images/Phone-Icon.png);
+}
+.section .option .icon.checkIcon{
+    width: 40px;
+    height: 37px;
+    background-image: url(./images/Check-Icon.png);
+}
+.section-line{
+    display: flex;
+    justify-content: space-between;
+}
+/* 产品说明 */
+.product-container{
+    background-color: #fff;
+    width: 100%;
+}
+.product-des{
+    width: 975px;
+    margin: 0 auto;
+}
+.product-des img{
+    width: 570px;
+    height: 350px;
+}
+.product-des .product-item{
+    display: flex;
+    align-items: center;
+}
+.product-des .product-item:last-child .product-info{
+    padding: 100px;
+    padding-left: 0;
+}
+.product-des .product-info{
+    width: 305px;
+    padding-left: 100px;
+}
+.product-des .product-info .title {
+    font-size:20px;
+    font-weight:300;
+    color:rgba(20,20,20,1);
+    line-height:32px;
+    margin-bottom: 35px;
+  }
+  .product-des .product-info .text {
+    font-size:16px;
+    font-weight:200;
+    color:rgba(20,20,20,.7);
+    line-height:28px;
+  }

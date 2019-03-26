@@ -1,0 +1,36 @@
+
+【讲师】赵猛-东 2019/3/23 16:05:05
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    /* 完全匹配 */
+  /* li[class="list-3-item"] {
+    color: red;
+  } */
+  /* 部分 */
+  /* ^ 由此开始*/
+  /* li[class^="list"] {
+    color: red;
+  } */
+  /* $ 由此结束*/
+  /* li[class$="2-item"] {
+    color: red;
+  } */
+  /* * 包含*/
+  [class*="-3-"] {
+    color: red;
+  }
+  </style>
+</head>
+<body>
+  <li class="list-1-item">1</li>
+  <li class="list-2-item">2</li>
+  <li class="list-3-item">3</li>
+  <p class="list-3-item">4</p>
+</body>
+</html>

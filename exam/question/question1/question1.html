@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            padding-top: 20px;
+            margin-top: 20px;
+            border: 2px solid aqua;
+        }
+
+        .box1 {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <script>
+            var bx1 = document.querySelector('.box1');
+            var width1 = bx1.getBoundingClientRect().width;
+            var height1 = bx1.getBoundingClientRect().height;
+            var margintop1 = window.getComputedStyle(bx1).marginTop;
+            var marginright1 = window.getComputedStyle(bx1).marginRight;
+            var marginbottom1 = window.getComputedStyle(bx1).marginBottom;
+            var marginleft1 = window.getComputedStyle(bx1).marginLeft;
+            console.log('%d px * %d px>%s - %s - %s - %s ',width1,height1,margintop1,marginright1,marginbottom1,marginleft1);
+            var bx2 = document.querySelector('.box2');
+            var width2 = bx2.getBoundingClientRect().width;
+            var height2 = bx2.getBoundingClientRect().height;
+            var margintop2 = window.getComputedStyle(bx2).marginTop;
+            var marginright2 = window.getComputedStyle(bx2).marginRight;
+            var marginbottom2 = window.getComputedStyle(bx2).marginBottom;
+            var marginleft2 = window.getComputedStyle(bx2).marginLeft;
+            console.log('%d px * %d px>%s - %s - %s - %s ',width2,height2,margintop2,marginright2,marginbottom2,marginleft2);
+    </script>
+</body>
+
+</html>
