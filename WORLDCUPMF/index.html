@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./lib/css/stylesheet.css">
+    <script src="./lib/alloy_finger/alloy_finger.js"></script>
+    <script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="perspective">
+        <!-- loading -->
+        <div class="load">
+            <div class="loadImg">
+                <div class="loadTxt">loading</div>
+                <div class="circle"></div>
+                <div class="circle1"></div>
+            </div>
+        </div>
+        <!-- shouye -->
+        <div class="global">
+            <div class="screen ease">
+                <section class="layer layer1">
+                    <div class="inner animated">
+                        <div class="hd cf f12 yh">
+                            <span class="fl">出品：腾讯体育</span>
+                            <span class="fr">创意：腾讯网创意中心</span>
+                        </div>
+                        <div class="bd">
+                            <div class="zh-logo">
+                                <img src="http://mat1.gtimg.com/sports/worldcup2014/match/zh_logo.png" alt="">
+                            </div>
+                            <h1 class="logo">
+                                <img width="320" src="http://mat1.gtimg.com/sports/worldcup2014/match/top_logo3.png"
+                                    alt="">
+                            </h1>
+                            <div class="mofang">
+                                <img width="260" src="http://mat1.gtimg.com/sports/worldcup2014/match/mofang2.png"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="ft">
+                            <div class="btn btn1">淘汰赛赛程</div>
+                            <div class="btn btn2">分组赛程</div>
+                            <div class="btn btn3">完全赛程</div>
+                            <div class="btn btn4">招行网行7.0交易送足彩</div>
+                        </div>
+                    </div>
+                </section>
+                <section class="layer layer2" id="layer2">
+                    <div class="inner animated">
+                        <div class="hd hd_bd">
+                            <span class="tit">淘汰赛赛程</span>
+                        </div>
+                        <div class="bd">
+                            <div class="js_tab_menu">
+                                <ul>
+                                    <li class="on">
+                                        <span>1/8决赛</span>
+                                    </li>
+                                    <li>
+                                        <span>1/4决赛</span>
+                                    </li>
+                                    <li>
+                                        <span>半决赛</span>
+                                    </li>
+                                    <li>
+                                        <span>决赛</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="js_tab_contents">
+                                <div class="conitem one">
+                                    <div class="warp_box">
+                                        <div id="scroller_1">
+                                            <img class="bg"
+                                                src="http://mat1.gtimg.com/sports/worldcup2014/match/line1.png" alt="">
+                                            <div class="items_box">
+                                                <div class="item_not_start">
+                                                    <span class="num">64</span>
+                                                    <ul class="country_list">
+                                                        <li class="first">
+                                                            <span class="flag">
+                                                                <img src="http://img1.gtimg.com/2014/pics/hv1/186/49/1641/106718706.jpg"
+                                                                    alt="">
+                                                            </span>
+                                                            <span class="name">德国</span>
+                                                            <span class="score"></span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="flag">
+                                                                <img src="http://f.seals.qq.com/filestore/10006/da/64/87/0/sportlogo/team_1_632.png?v=6"
+                                                                    alt="">
+                                                            </span>
+                                                            <span class="name">阿根廷</span>
+                                                            <span class="score"></span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="conitem two">
+                                    <img src="http://mat1.gtimg.com/sports/worldcup2014/match/line2.png" alt="">
+                                    <div class="items_box">
+                                        <div class="item not_start">
+                                            <span class="num">64</span>
+                                            <ul class="country_list">
+                                                <li class="first">
+                                                    <span class="flag">
+                                                        <img src="http://img1.gtimg.com/2014/pics/hv1/186/49/1641/106718706.jpg"
+                                                            alt="">
+                                                    </span>
+                                                    <span class="name">德国</span>
+                                                    <span class="score"></span>
+                                                </li>
+                                                <li>
+                                                    <span class="flag">
+                                                        <img src="http://f.seals.qq.com/filestore/10006/da/64/87/0/sportlogo/team_1_632.png?v=6"
+                                                            alt="">
+                                                    </span>
+                                                    <span class="name">阿根廷</span>
+                                                    <span class="score"></span>
+                                                </li>
+                                            </ul>
+                                            <div class="dec">
+                                                <p>7月4日</p>
+                                                <p>03:00</p>
+                                                <p class="state">1-0</p>
+                                            </div>
+                                        </div>
+                                        <div class="item not_start mt25">
+                                            <span class="num">63</span>
+                                            <ul class="country_list">
+                                                <li class="first">
+                                                    <span class="flag">
+                                                        <img _src="http://img1.gtimg.com/2014/pics/hv1/104/48/1641/106718369.jpg"
+                                                            src="http://img1.gtimg.com/2014/pics/hv1/104/48/1641/106718369.jpg">
+                                                    </span>
+                                                    <span class="name">巴西</span>
+                                                    <span class="score"></span>
+                                                </li>
+                                                <li>
+                                                    <span class="flag">
+                                                        <img _src="http://img1.gtimg.com/2014/pics/hv1/186/49/1641/106718706.jpg"
+                                                            src="http://img1.gtimg.com/2014/pics/hv1/186/49/1641/106718706.jpg">
+                                                    </span>
+                                                    <span class="name">荷兰</span>
+                                                    <span class="score"></span>
+                                                </li>
+                                            </ul>
+                                            <div class="des">
+                                                <p>7月13日</p>
+                                                <p>04:00</p>
+                                                <p class="state">0-3</p>
+                                            </div>
+                                        </div>
+                                        <div class="item not_start mt25">
+                                            <span class="num">63</span>
+                                            <ul class="country_list">
+                                                <li class="first">
+                                                    <span class="flag">
+                                                        <img _src="http://img1.gtimg.com/2014/pics/hv1/104/48/1641/106718369.jpg"
+                                                            src="http://img1.gtimg.com/2014/pics/hv1/104/48/1641/106718369.jpg">
+                                                    </span>
+                                                    <span class="name">巴西</span>
+                                                    <span class="score"></span>
+                                                </li>
+                                                <li>
+                                                    <span class="flag">
+                                                        <img _src="http://img1.gtimg.com/2014/pics/hv1/186/49/1641/106718706.jpg"
+                                                            src="http://img1.gtimg.com/2014/pics/hv1/186/49/1641/106718706.jpg">
+                                                    </span>
+                                                    <span class="name">荷兰</span>
+                                                    <span class="score"></span>
+                                                </li>
+                                            </ul>
+                                            <div class="des">
+                                                <p>7月13日</p>
+                                                <p>04:00</p>
+                                                <p class="state">0-3</p>
+                                            </div>
+                                        </div>
+                                        <div class="item not_start mt25">
+                                            <span class="num">63</span>
+                                            <ul class="country_list">
+                                                <li class="first">
+                                                    <span class="flag">
+                                                        <img _src="http://img1.gtimg.com/2014/pics/hv1/104/48/1641/106718369.jpg"
+                                                            src="http://img1.gtimg.com/2014/pics/hv1/104/48/1641/106718369.jpg">
+                                                    </span>
+                                                    <span class="name">巴西</span>
+                                                    <span class="score"></span>
+                                                </li>
+                                                <li>
+                                                    <span class="flag">
+                                                        <img _src="http://img1.gtimg.com/2014/pics/hv1/186/49/1641/106718706.jpg"
+                                                            src="http://img1.gtimg.com/2014/pics/hv1/186/49/1641/106718706.jpg">
+                                                    </span>
+                                                    <span class="name">荷兰</span>
+                                                    <span class="score"></span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

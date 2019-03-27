@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function Animal(planet){
+        this.planet = planet;
+    }
+    Animal.prototype.getPlanet = function(){
+        return this.planet;
+    }
+        //人类 constructor 男
+    function Person(name){
+        this.name = name;
+    }
+    //属性 第二者
+    //Person应该要拿到Animal上的属性或方法   hx.__proto__拿到构造函数原型上的属性或方法
+    //可不可以人Animal 作为它的父类呢
+    //new Animal() = hx;
+    var animal = new Animal();
+    animal.__proto__ = Animal.prototype;
+    //hx.getPlanet()
+    //hx.__proto__(第一次原型查找).__proto__ = Animal.prototype->getPlanet ;
+    Person.prototype = new Animal('earth');
+    Person.prototype.getName = function(){
+        console.log(this.name);
+    }
+    var hx = new Person('黄旭');
+    </script>
+</body>
+</html>

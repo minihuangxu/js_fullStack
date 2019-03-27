@@ -1,0 +1,337 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,ol{
+    list-style: none
+}
+body{
+    font-size: 100%;
+    font-family: Helvetica,san-serif,Fallback;   
+    -webkit-tab-hightlight-color:rgba(0,0,0,0);
+    -ms-tab-hightlight-color:rgba(0,0,0,0);
+    tab-hightlight-color:rgba(0,0,0,0);
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+img{
+    display: inline-block;
+}
+.f12{
+    font-size: 12px;
+}
+.fr{
+    float: right;
+}
+.fl{
+    float: left;
+}
+.cf::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.perspective{
+    height: 100%;
+    margin: 0 auto;
+}
+.load{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #43812b;
+    z-index: 1000;
+    display: none;
+}
+.layer1{
+    display: none;
+}
+.loadImg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0 0 -50px;
+    width: 100px;
+    height: 100px;
+}
+.loadTxt{
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    line-height: 50px;
+    text-align: center;
+    color: #fff86b;
+    font-size: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;   
+}
+.circle{
+    background-color: rgba(0,0,0,0);
+    border: 5px solid rgba(251,241,107,0.9);
+    opacity: .9;
+    border-right-color: rgba(0,0,0,0);
+    border-left-color: rgba(0,0,0,0);
+    -webkit-box-shadow: 0 0 30px #fbf49a;
+    -ms-box-shadow: 0 0 30px #fbf49a;
+    box-shadow: 0 0 30px #fbf49a;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 auto;
+    animation: spinPulse 1s infinite linear;
+}
+@keyframes spinPulse {
+    0%{
+        transform: rotate(160deg);
+        opacity: 0;
+        box-shadow: 0 0 1px #2187e7;
+    }
+    50%{
+        transform: rotate(145deg);
+        opacity: 1;
+    }
+    100%{
+        transform: rotate(-320deg);
+        opacity: 0;
+    }
+}
+.circle1{
+    background-color: rgba(0,0,0,0);
+    border: 5px solid rgba(251,241,107,1);
+    opacity: .9;
+    border-right-color: rgba(0,0,0,0);
+    border-left-color: rgba(0,0,0,0);
+    -webkit-box-shadow: 0 0 15px #fbf49a;
+    -ms-box-shadow: 0 0 15px #fbf49a;
+    box-shadow: 0 0 15px #fbf49a;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+    top:-50px;
+    animation: spinofPulse 1s infinite linear;
+}
+@keyframes spinofPulse{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+/* 首页 */
+.global{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform-style:preserve-3d; 
+}
+.screen{
+    transform-style: preserve-3d;
+    height: 100%;
+}
+.ease{
+    transition: all 1s ease-in-out;
+}
+.animated{
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+.layer{
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+.global,.screen,.layer{
+    z-index: 1;
+}
+.layer1{
+    position: relative;
+    background: url('http://mat1.gtimg.com/sports/worldcup2014/match/page_1.jpg')top center no-repeat;
+    background-size: cover;
+}
+.layer1 .inner{
+    width: 100%;
+    height: 100%;
+}
+.layer1 .hd{
+    padding: 10px 30px;
+    color: #9bc894;
+}
+.layer1 .bd{
+    position: absolute;
+    left: 0;
+    top: 7%;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.layer1 .animated .mofang{
+    opacity: 1;
+    animation: mofang 1.3s linear;
+}
+@keyframes mofang{
+    0%,50%{
+        transform: scale(0);
+        opacity: 0.5;
+    }
+    70%{
+        transform: scale(1.5);
+        opacity: 0.8;
+    }
+    80%{
+        transform: scale(0.8);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1.2);
+    }
+}
+/* ft */
+.layer1 .ft{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+.layer1 .ft .btn{
+    position: relative;
+    height: 37px;
+    margin: 0 auto;
+    text-align: center;
+    color: #435d50;
+    font:16px/32px '微软雅黑';
+}
+.layer1 .ft .btn1{
+    background: url('http://mat1.gtimg.com/sports/worldcup2014/match/btn_1.png') top center no-repeat;
+    background-size: 222px 84px;
+    animation-delay: 1.5s;
+}
+.layer1 .ft .btn2{
+    background: url('http://mat1.gtimg.com/sports/worldcup2014/match/btn_2.png') top center no-repeat;
+    background-size: 277px 84px;
+    animation-delay: 1s
+}
+.layer1 .ft .btn3{
+    background: url('http://mat1.gtimg.com/sports/worldcup2014/match/btn_3.png') top center no-repeat;
+    background-size: 320px 84px;
+    animation-delay: 0.5s;
+}
+.layer1 .ft .btn4{
+    background: url('http://mat1.gtimg.com/sports/worldcup2014/match/btn_4.png') top center no-repeat;
+    background-size: 100% 84px;
+    animation-delay: 0s;
+}
+.layer1 .ft .btn{
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: bounceIn;
+}
+@keyframes bounceIn{
+    0%{
+        opacity: 0;
+        transform: scale(.3);
+    }
+    50%{
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70%{
+        transform: scale(.9);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.layer1 .ft .btn::before{
+    content: '';
+    position: absolute;
+    top: -9px;
+    left: 50%;
+    margin-left: 35px;
+    width: 51px;
+    height: 12px;
+}
+.layer1 .ft .btn1::before{
+    background: url(http://mat1.gtimg.com/sports/worldcup2014/match/btn_arr_1.png);
+    background-size: 51px 12px;
+}
+.layer1 .ft .btn2::before{
+    background: url(http://mat1.gtimg.com/sports/worldcup2014/match/btn_arr_2.png);
+    background-size: 51px 12px;
+}
+.layer1 .ft .btn3::before{
+    background: url(http://mat1.gtimg.com/sports/worldcup2014/match/btn_arr_3.png);
+    background-size: 51px 12px;
+}
+.layer1 .ft .btn4::before{
+    background: url(http://mat1.gtimg.com/sports/worldcup2014/match/btn_arr_4.png);
+    background-size: 51px 12px;
+}
+/* 淘汰赛赛程 */
+.layer2{
+    background-color: #f9ffe7;
+    position: relative;
+}
+.hd_bd{
+    border-width: 30px 15px 8px 15px;
+    border-style: solid;
+    position: relative;
+    text-align: center;
+    line-height: 30px;
+    z-index: 2;
+}
+.layer2 .hd_bd{
+    color: #435d50;
+    border-color: #fff #55b852 #55b852 #55b852 ;
+}
+.hd_bd .tit{
+    color: #435d50;
+    font-size: 18px;
+    position: absolute;
+    width: 100%;
+    top: -30px;
+    left: 0;
+}
+.js_tab_menu{
+    background-color: #55b852;
+    height: 30px;
+    border-bottom: 4px solid #faf848;
+    padding: 0 9px 0 14px;
+}
+.js_tab_menu li{
+    display: block;
+    float: left;
+    height: 30px;
+    text-align: center;
+    width: 25%;
+    position: relative;
+}
+.js_tab_menu li span{
+    position: absolute;
+    display: block;
+    height: 30px;
+    font-size: 18px;
+    color: #ffffff;
+    line-height: 30px;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.js_tab_menu .on span{ 
+    background: url('http://mat1.gtimg.com/sports/worldcup2014/match/tab_on.png') no-repeat;
+    background-size: 100% 100%;
+    color: #117d0e;
+}
+#js_tab_contents .one .bg{
+    height: 747px;
+}
