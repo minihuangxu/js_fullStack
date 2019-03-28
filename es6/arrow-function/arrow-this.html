@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const shixian = {
+        msg:'this is 世贤'
+    } 
+    const pinru ={
+        msg:'this is 品如'
+    }
+    function shixian_func(){
+        var arrow_shixian_func = () =>{
+        console.log(this);
+        console.log(this.msg);
+    }
+    arrow_shixian_func();
+    }   
+    shixian_func.call(pinru);
+    
+    
+
+
+    // shixian_func.call(shixian);
+
+    // var arrow_shixian_func = () =>{
+    //     console.log(this);
+    //     console.log(this.msg);
+    // }
+    // arrow_shixian_func.call(shixian);
+    </script>
+</body>
+</html>

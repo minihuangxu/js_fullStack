@@ -58,14 +58,30 @@
 
     function findListItem(sectionId, spanCont) {
       // 返回某个section下，所有所包含span内容为spanCont的LI标签
-      const sectionNode = document.getElementById(setionId);
-      if(!sectionNode) return null;
-      let LIHTMLnodes = [];
-      
+      const sectionNode = document.getElementById(sectionId);
+      const li =sectionNode.querySelectorAll('li');
+      // if(!sectionNode) return null;
+      let LI = [];
+      const span = sectionNode.querySelectorAll('span');
+      for(let i = 0;i< span.length;i++){
+        if(span[i].innerHTML === spanCont){
+          LI.push(li[i]);
+        }
+      }
+      return LI;      
     }
 
     function getActiveLinkContent(sectionId) {
       // 返回某个section下，class为active的链接中包含的文字内容
+      const sectionNode = document.getElementById(sectionId);
+      let A = [];
+      const anode = sectionNode.querySelectorAll('a');
+      for(i = 0 ;i < anode.length ;i++){
+        if(anode[i].className === 'active'){
+          A.push(anode[i].innerHTML);
+        }
+      }
+      return A;
     }
   </script>
 </body>

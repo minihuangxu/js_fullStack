@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const Person = [{
+        name:'洪世贤',
+        age:32
+    },
+    {
+        name:'品如',
+        age:30
+    },
+    {
+        name:'艾莉',
+        age:29
+    },
+    {
+        name:'宝莲',
+        age:25
+    }];
+    const this_age = Person.find((Person) =>{ return Person.age === 29});  
+    const this_age_index = Person.findIndex((Person) =>{ return Person.age === 29});  
+    console.log(this_age,this_age_index);
+    </script>
+</body>
+</html>
