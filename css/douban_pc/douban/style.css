@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    color: #111;
+    background: #fff;
+}
+body, td, th {
+    font: 12px Helvetica,Arial,sans-serif;
+    line-height: 1.62;
+}
+div{
+    display: block;
+}
+#anony-nav{
+    width: 950px;
+    margin: 0 auto 25px;
+}
+#anony-nav .anony-nav-links{
+    float: right;
+    margin-top: 6px;
+}
+ul{
+    list-style: none;
+}
+li{
+    text-align:-webkit-match-parent;
+    display: inline-block;
+}
+#anony-nav h1{
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+    width: 160px;
+    height: 34px;
+    margin: 0 20px 0 0;
+    padding: 0;
+    font-size: 12px;
+    font-weight: normal;
+    background: url(./logo_db.png) no-repeat 0 0;
+}
+#anony-nav h1 a{
+    display: block;
+    height: 34px;
+    line-height: 10em;
+}
+#anony-nav .anony-nav-links li a {
+    display: inline-block;
+    zoom: 1;
+    width: 40px;
+    height: 20px;
+    overflow: hidden;
+    margin: 0;
+    line-height: 20em;
+    outline: none;
+    vertical-align: middle;
+    background: transparent url(./anony_nav_logo.png) no-repeat 100% 100%;
+}
+a:visited{
+    color: #669;
+    text-decoration: none;
+}
+a:link{
+    color: #37a;
+    text-decoration: none;
+}
+a{
+    cursor: pointer;
+}
+#anony-nav .anony-nav-links li .lnk-book{
+    background-position: 0 0;
+}
+#anony-nav .anony-nav-links li .lnk-movie{
+    background-position: -60px 0;
+}
+#anony-nav .anony-nav-links li .lnk-music{
+    background-position: -120px 0;
+}
+#anony-nav .anony-nav-links li .lnk-group{
+    background-position: -180px 0;
+}
+#anony-nav .anony-nav-links li .lnk-events{
+    background-position: -240px 0;
+}
+#anony-nav .anony-nav-links li .lnk-fm{
+    background-position: -300px 0;
+}
+#anony-nav .anony-nav-links li .lnk-shijian{
+    background-position: -360px 0;
+}
+#anony-nav .anony-nav-links li .lnk-market{
+    background-position: -420px 0;
+}
