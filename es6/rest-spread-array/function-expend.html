@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function Person(nickName = '未知昵称'){
+        // if(!nickName){
+        //     nickName = '未知昵称';
+        // }
+        // this.nickName = nickName || '未知昵称';
+        this.nickName = nickName;
+    }
+    const p1 = new Person('nicknName');
+    //p1{nickName:'nickName'}
+    const p2 = new Person();
+    //rest参数 形式（...变量名）
+    //获取多余的参数，变量名是数组
+    //把多余的放入这个数组中 a，...args
+    //Rest parameter must be last
+    function sum(a,z, ...args){
+
+        console.log(args);
+    }
+    sum(2,4,6,8);
+    </script>
+</body>
+</html>

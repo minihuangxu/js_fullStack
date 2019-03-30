@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>扩展运算符</title>
+</head>
+<body>
+    <script>
+        //扩展运算符像是 rest 参数的逆运算
+        //将一个数组打散
+    // const arr = [6,8,9];
+    // console.log(...arr);
+    // console.log([...arr]);
+
+    //
+    // const arr1 = [0,1,2];
+    // const arr2 = [3,4,5];
+    //console.log([...arr1,...arr2]);
+    //数组拼接
+    // const newArr_spread = [...arr1,...arr2];
+    //arr1.push(...arr2);
+    const min_arr = [100,10,65,46,54];
+    // const mini= Math.min(...min_arr);
+
+    function sum(...args){
+        let sum =0;
+        for(let i =0;i<args.length;i++){
+            sum +=args[i];
+        }
+        return sum;
+    }
+    const a = sum(...min_arr);
+    </script>
+</body>
+</html>
