@@ -35,10 +35,10 @@ for $v in 1..$cols
   .col-{$v}
     width (100 / 12 * $v)%
 
-for $k, $v in $query
-  @media only screen and ({$v.query})
+for $a, $k in $query
+  @media only screen and ({$k.query})
     .container
-      width unit($v['containerWidth'], px)
+      width unit($k['containerWidth'], px)
     for $v in 1..$cols
       .col-{$k}-{$v}
         width (100 / 12 * $v)%
