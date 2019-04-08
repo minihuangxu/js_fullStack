@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
   <link rel="stylesheet" href="style.css">
   <title>Document</title>
 </head>
+
 <body>
   <header class="nav">
     <i class="arrow-left"></i>
@@ -25,7 +27,7 @@
           <!-- pic -->
           <div class="movie-cover">
             <a href="#" class="link">
-              <img class="img" alt="" id="moviePic">
+              <img class='img' src="" alt="" id="moviePic">
             </a>
           </div>
           <!-- detail -->
@@ -38,46 +40,211 @@
             </div>
             <!-- star -->
             <div class="movie-score">
-                <div class="released-score">
-                    <div class="rating" id="rating">
-                        <span class="rating-score"></span>
-                    </div>
-                    <div class="score-num">
-                        (<span></span>人评分)
-                    </div>
+              <div class="released-score">
+                <div class="rating" id="rating">
+                  <span class="rating-score"></span>
                 </div>
+                <div class="score-num">
+                  (<span></span>人评分)
+                </div>
+              </div>
             </div>
+            <div class="movie-detail">
+              <p class="movie-type"></p>
+              <p class="address-time">
+                <span class="address">zg</span>
+                /
+                <span class="time">111</span>
+                分钟
+              </p>
+              <p class="date"></p>
+            </div>
+          </div>
+        </div>
+        <div class="operating flex">
+          <div class="movie-watch flex1" id="movie-watch">
+            <img src="./images/heart.png" alt="">
+            <span>想看</span>
+          </div>
+          <div class="movie-mark flex1">
+            <img src="./images/star2.png" alt="">
+            <span>评分</span>
           </div>
         </div>
       </div>
     </section>
+    <!-- section2 -->
+    <section class="section-seperate section-expander">
+      <div class="text-expander" id="text-expander">
+        <div class="text-expander__content close">
+          <p></p>
+        </div>
+        <div class="text-expander__button">
+          <i class="icon-chevron__down"></i>
+        </div>
+      </div>
+    </section>
+    <!-- section3 -->
+    <section class="section-seperate">
+      <p class="action-list section-til">演职人员</p>
+      <ul class="movie-celebrities">
+        <!-- <li>
+          <a href="#" class="link">
+            <div class="movie-celebrities_pic">
+              <img src="http://p1.meituan.net/moviemachine/6e06b1eee9a74c9573fdb8150fb8561271624.jpg" alt="">
+              <span class="movie-celebrities-nick">杨幂</span>
+              <span class="movie-celebrities-roles">夕瑶</span>
+            </div>
+          </a>
+        </li> -->
+      </ul>
+    </section>
+    <!-- section4 -->
+    <section class="movie-booking section-seperate section-expander">
+      <p class="section-til">票房</p>
+      <!-- <div class="weui-flex">
+        <div class="weui-flex__item"><div class="placeholder">
+          <span>2312</span>
+          <p>昨日票房排行</p>
+        </div></div>
+        <div class="weui-flex__item"><div class="placeholder">
+          <span>232</span>
+          <p>首周票房（万）</p>
+        </div></div>
+        <div class="weui-flex__item"><div class="placeholder">
+          <span>21212</span>
+          <p>累计票房（万）</p>
+        </div></div>
+    </div> -->
+    </section>
+    <!-- section5 -->
+    <div class="movie-photo section-seperate">
+      <p class="action-list section-til">视频和剧照</p>
+      <ul class="movie-photo_lists">
+        <!-- <li class="stage-img-container">
+          <a href="#" class="link">
+            <div class="movie-celebrities_pic">
+              <img src="./images/avatar.jpg" alt="">
+            </div>
+          </a>
+        </li> -->
+      </ul> 
+    </div>
+    <!-- toast -->
+    <div id="toast">
+      <div class="weui-mask_transparent"></div>
+      <div class="weui-toast">
+        <i class="weui-icon-success-no-circle weui-icon_toast"></i>
+        <p class="weui-toast__content">已标记为想看</p>
+      </div>
+    </div>
   </div>
   <script>
-    (function(){
+    (function () {
       $.ajax({
         url: 'https://www.easy-mock.com/mock/5ca4960634e2a127a257d66e/mini/mini',
         type: 'get',
-        success:function(res){
-         //console.log(res)
+        success: function (res) {
+          console.log(res)
           $('#moviePic').attr('src', res.data.moviePic)
           $('.movie-content .movie-name span').html(res.data.name)
           $('.movie-content .movie-ename span').html(res.data.nameEnglish)
+          star(res.data.star)
           $('.rating-score').html(res.data.grade)
           $('.score-num span').html(res.data.people)
-          
-          star(res.data.star)
+          $('.movie-type').html(res.data.type)
+          $('.address-time .address').html(res.data.where)
+          $('.address-time .time').html(res.data.time)
+          $('.movie-detail .date').html(res.data.date)
+          $('.text-expander__content p').html(res.data.desc)
+          celebrity(res.data.person)
+          booking(res.data.booking)
+          photo(res.data.pictures)
         }
       })
-      function star(e){
-          let num = Math.floor(e)
-          if(e>num){
-            $('#rating').prepend('<img class="img" src="./images/star-h.png" >')
-          }
-          for(let i = 0;i <num;i++){
-            $('#rating').prepend('<img class="img" src="./images/star.png" >')
-          }
+      function star(e) {
+        let num = Math.floor(e)
+        if (e > num) {
+          $('#rating').prepend('<img class="img" src="./images/star-h.png">')
+        }
+        for (let i = 0; i < num; i++) {
+          $('#rating').prepend('<img class="img" src="./images/star.png">')
+        }
       }
-    })()
+
+      $('#movie-watch').click(function () {
+        if ($(this).hasClass('active')) {
+          $('#movie-watch').removeClass('active')
+          $('#movie-watch img').attr('src', './images/heart.png')
+          $('#toast .weui-toast__content').html('已取消想看')
+        } else {
+          $('#movie-watch').addClass('active')
+          $('#movie-watch img').attr('src', './images/heart1.png')
+          $('#toast .weui-toast__content').html('已标记为想看')
+        }
+        $('#toast').css('display', 'block')
+        setTimeout(() => {
+          $('#toast').css('display', 'none')
+        }, 1500)
+      })
+      // 收放详情
+      $('#text-expander').on('click', function () {
+        if ($('.text-expander__content').hasClass('close')) {
+          $('.text-expander__content').removeClass('close')
+          $('.icon-chevron__down').addClass('up')
+        } else {
+          $('.text-expander__content').addClass('close')
+          $('.icon-chevron__down').removeClass('up')
+        }
+      })
+      // 演员表
+      function celebrity(e){
+        for (let n of e)  {
+          $('.movie-celebrities').append(`<li>
+          <a href="#" class="link">
+            <div class="movie-celebrities_pic">
+              <img src="${n.avatal}" alt="">
+              <span class="movie-celebrities-nick">${n.name}</span>
+              <span class="movie-celebrities-roles">${n.sort}</span>
+            </div>
+          </a>
+        </li>`)
+        }     
+      }
+      // 票房
+      function booking(e){
+          $('.movie-booking').append(` <div class="weui-flex">
+        <div class="weui-flex__item"><div class="placeholder">
+          <span>${e.ranking}</span>
+          <p>昨日票房排行</p>
+        </div></div>
+        <div class="weui-flex__item"><div class="placeholder">
+          <span>${e.bookingWeek}</span>
+          <p>首周票房（万）</p>
+        </div></div>
+        <div class="weui-flex__item"><div class="placeholder">
+          <span>${e.bookingTotal}</span>
+          <p>累计票房（万）</p>
+        </div></div>
+    </div>`)
+        }
+      
+      // 剧照
+      function photo (e){
+        for(let m of e){
+          $('.movie-photo_lists').append( `
+        <li class="stage-img-container">
+          <a href="#" class="link">
+            <div class="movie-celebrities_pic">
+              <img src="${m}" alt="">
+            </div>
+          </a>
+        </li>
+        `)
+        }
+      }
+      })()
   </script>
 </body>
+
 </html>
