@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQuery源码解析 - 旅梦源码</title>
+</head>
+
+<body>
+    <img src="https://pic.36krcnd.com/201904/09061934/9axl9yt10w5w6kq6!heading" alt="" onLoad="photoLoaded();" />
+    <script src="https://cdn.bootcss.com/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <script>
+        //页面加载完成之后
+        //开始写js是不对的， 晚了
+        window.onload = function(){
+            console.log('window load')
+        }
+        //html 结构下载，css 并且生成了文档树
+        //document.addEventListener('DOMContentLoaded',function(){
+            //console.log('DOM Ready')
+            //DOM Ready
+            //})
+            //DOMContentLoaded 有兼容性问题，jQuery为此而来
+            //$ 是函数 function（）{}是参数
+            $(function(){
+                console.log('DOM Ready');
+            })
+        function photoLoaded() {
+            console.log('图片loaded')
+        }
+    </script>
+</body>
+
+</html>
