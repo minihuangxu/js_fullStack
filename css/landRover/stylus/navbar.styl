@@ -1,0 +1,42 @@
+.ui.navbar
+    background-color #fff
+    .content
+        display flex
+        flex-direction row
+        align-items center
+        position relative
+        overflow hidden
+    .header > img 
+        width 98px
+    .menu
+        margin-left 103px
+    .menu .item
+        display inline-block
+        font-size:18px;
+        font-weight:300;
+        color:rgba(0,0,0,1);
+        line-height:25px;
+        padding-top 26px
+        padding-bottom 35px
+        &:not(:first-child)
+            margin-left 64px
+        &.active
+            border-bottom 2px solid #000
+    .search-icon
+        flex 1
+        text-align right
+@media only screen and (min-width:767px)
+    .ui.navbar
+        .menu-icon
+            display none
+@media only screen and (max-width:767px)
+    .ui.navbar
+        .header > img 
+            width 56px
+        .content .menu
+            display none
+        .content
+            justify-content space-between
+            padding-top 9px
+        .search-icon
+            flex 0

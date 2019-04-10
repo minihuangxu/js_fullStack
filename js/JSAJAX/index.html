@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var xhr = null
+        if (window.XMLHttpRequest) {
+            xhr = new XMLHttpRequest()
+        } else {
+            xhr = new ActiveXObject("MicroSoft.XMLHTTP")
+        }
+        xhr.open('get', './mock.json', true)
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
+        xhr.send()
+        // console.log(xhr.responseText)
+        // console.log(xhr.readyState,xhr.status)
+        var p = new Promise((resolve, reject) => {
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    console.log(xhr.responseText)
+                    resolve(xhr.responseText)
+                }
+            }
+        })
+        function xq() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    console.log("艾莉追求刺激")
+                    resolve('穿上品如的衣服')
+                }, 1000);
+            })
+        }
+        function marry() {
+            setTimeout(() => {
+                console.log("那就贯彻到底咯")
+            },500)  
+        }
+        //xq();
+        p
+            .then(xq)
+            .then(marry)
+            // .then((e) => {
+            //     console.log(e)
+            // })
+            .catch(() => {
+                console.log('你好骚啊')
+            })
+    </script>
+</body>
+
+</html>
