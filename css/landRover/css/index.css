@@ -11,8 +11,12 @@
 .ui.navbar .header > img {
   width: 98px;
 }
+.ui.navbar .header {
+  transition: all 0.4s;
+}
 .ui.navbar .menu {
   margin-left: 103px;
+  transition: all 0.4s;
 }
 .ui.navbar .menu .item {
   display: inline-block;
@@ -33,6 +37,22 @@
   flex: 1;
   text-align: right;
 }
+.ui.navbar .search-form {
+  position: absolute;
+  transform: translateY(-120px);
+  opacity: 0;
+  transition: all 0.5s;
+}
+.ui.navbar .searching .search-form {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.ui.navbar .searching .header,
+.ui.navbar .searching .menu,
+.ui.navbar .searching .menu-icon {
+  transform: translateY(80px);
+  opacity: 0;
+}
 @media only screen and (min-width: 767px) {
   .ui.navbar .menu-icon {
     display: none;
@@ -52,4 +72,80 @@
   .ui.navbar .search-icon {
     flex: 0;
   }
+}
+.ui.hero {
+  background: #f0f0f0;
+}
+.ui.hero .item {
+  position: relative;
+  overflow: hidden;
+}
+.ui.hero .item .content {
+  display: flex;
+  align-items: center;
+  height: 696px;
+}
+.ui.hero .item .header {
+  font-size: 48px;
+  margin: 0;
+  margin-bottom: 16px;
+}
+.ui.hero .item .sub.header {
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 8px;
+}
+.ui.hero .item .description {
+  font-size: 18px;
+  margin-bottom: 32px;
+  font-weight: 600;
+}
+.ui.hero .item img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  object-fit: cover;
+}
+.ui.hero .item .ui.container {
+  position: relative;
+  z-index: 2;
+}
+.ui.carousel .prev.button {
+  left: 24px;
+}
+.ui.carousel .next.button {
+  right: 24px;
+}
+.ui.carousel .prev.button,
+.ui.carousel .next.button {
+  position: absolute;
+  z-index: 3;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  text-align: center;
+  background: rgba(255,255,255,0.4);
+  color: rgba(0,0,0,0.4);
+}
+.ui.carousel .prev.button.bottom,
+.ui.carousel .next.button.bottom {
+  top: auto;
+  bottom: 0;
+  margin-bottom: 24px;
+}
+.ui.carousel .prev.button:hover,
+.ui.carousel .next.button:hover {
+  background: rgba(255,255,255,0.2);
+  color: rgba(0,0,0,0.2);
+}
+.ui.carousel .slick-dots {
+  bottom: 32px;
+}
+.ui.vertical.story .slick-dots {
+  bottom: -48px;
 }

@@ -315,6 +315,37 @@ body {
 .page .movie-photo .movie-photo_lists .stage-img-container:last-child {
   margin-right: 0;
 }
+.page .pos_r {
+  position: relative;
+}
+.page .pos_r .join-comment {
+  position: absolute;
+  font-size: 14px;
+  background-color: #e54847;
+  color: #fff;
+  padding: 0.1rem 0.3rem;
+  border-radius: 20px;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.page .movie-comment {
+  padding: 0.2rem 0.4rem;
+}
+.page .movie-comment .comment-item {
+  float: left;
+  border: 1px soild #aaa;
+  border-radius: 20px;
+  padding: 0.1rem 0.25rem;
+  margin-top: 0.2rem;
+  margin-right: 0.3rem;
+}
+.page .movie-comment .comment-item .comment-item_sort {
+  font-size: 0;
+}
+.page .movie-comment .comment-item .comment-item_sort span {
+  font-size: 14px;
+}
 #toast {
   display: none;
 }

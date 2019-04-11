@@ -248,7 +248,7 @@ html,body
           box-sizing border-box
           .stage-img-container
               margin-right .13333rem
-              display inline-block
+              display  inline-block
               width 2.4rem
               height 1.867rem
               .movie-celebrities_pic
@@ -262,8 +262,31 @@ html,body
                   height 1.867rem
               &:last-child
                   margin-right 0
-
-
+  .pos_r
+    position relative
+    .join-comment
+      position absolute
+      font-size 14px
+      background-color #e54847
+      color $font_color_white
+      padding 0.1rem 0.3rem
+      border-radius 20px
+      top 50%
+      right 0
+      transform translateY(-50%)
+  .movie-comment
+    padding 0.2rem 0.4rem
+    .comment-item
+      float left
+      border 1px soild #aaaaaa
+      border-radius 20px
+      padding 0.1rem 0.25rem
+      margin-top 0.2rem
+      margin-right 0.3rem
+      .comment-item_sort
+        font-size 0
+        span
+          font-size 14px
 
 #toast
   display none
