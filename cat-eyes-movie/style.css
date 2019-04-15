@@ -112,6 +112,7 @@ body {
 .page .movie-header .movie .movie-container {
   z-index: 1;
   position: relative;
+  overflow: hidden;
 }
 .page .movie-header .movie .movie-container .movie-cover {
   float: left;
@@ -255,12 +256,12 @@ body {
 .page .section-seperate .movie-celebrities li .link {
   color: #000;
 }
-.page .section-seperate .movie-celebrities li .link .movie-celebrities_pic {
+.page .section-seperate .movie-celebrities li .link .movie-celebrities__pic {
   width: 1.7334rem;
   height: 2.4rem;
   margin: 0.05rem;
 }
-.page .section-seperate .movie-celebrities li .link .movie-celebrities_pic img {
+.page .section-seperate .movie-celebrities li .link .movie-celebrities__pic img {
   width: 100%;
 }
 .page .section-seperate .movie-celebrities li .link span {
@@ -279,40 +280,40 @@ body {
 .page .movie-booking .weui-flex {
   text-align: center;
 }
-.page .movie-booking .weui-flex .placeholder {
-  color: #bababa;
-  margin-top: 0.1rem;
-}
 .page .movie-booking .weui-flex .placeholder span {
   font-size: 24px;
   color: #d96a3d;
 }
-.page .movie-photo .movie-photo_lists {
+.page .movie-booking .weui-flex .placeholder p {
+  color: #bababa;
+  margin-top: 0.1rem;
+}
+.page .movie-photo .movie-photo__lists {
   width: 100%;
-  padding: 0.3rem 0.3rem 0.2rem 0.2rem;
+  padding: 0.3rem 0.3rem 0.2rem 0.3rem;
   overflow-x: scroll;
   white-space: nowrap;
   box-sizing: border-box;
 }
-.page .movie-photo .movie-photo_lists .stage-img-container {
+.page .movie-photo .movie-photo__lists .stage-img-container {
   margin-right: 0.13333rem;
   display: inline-block;
   width: 2.4rem;
   height: 1.867rem;
 }
-.page .movie-photo .movie-photo_lists .stage-img-container .movie-celebrities_pic {
+.page .movie-photo .movie-photo__lists .stage-img-container .movie-celebrities__pic {
   width: 100%;
   height: 100%;
 }
-.page .movie-photo .movie-photo_lists .stage-img-container .movie-celebrities_pic img {
+.page .movie-photo .movie-photo__lists .stage-img-container .movie-celebrities__pic img {
   width: 100%;
   height: 100%;
 }
-.page .movie-photo .movie-photo_lists .stage-img-container:first-child {
+.page .movie-photo .movie-photo__lists .stage-img-container:first-child {
   width: 3.3334rem;
   height: 1.867rem;
 }
-.page .movie-photo .movie-photo_lists .stage-img-container:last-child {
+.page .movie-photo .movie-photo__lists .stage-img-container:last-child {
   margin-right: 0;
 }
 .page .pos_r {
@@ -330,21 +331,83 @@ body {
   transform: translateY(-50%);
 }
 .page .movie-comment {
-  padding: 0.2rem 0.4rem;
+  overflow: hidden;
+  padding: 0.2rem 0 0.4rem 0;
 }
 .page .movie-comment .comment-item {
   float: left;
-  border: 1px soild #aaa;
+  border: 1px solid #aaa;
   border-radius: 20px;
   padding: 0.1rem 0.25rem;
   margin-top: 0.2rem;
   margin-right: 0.3rem;
 }
-.page .movie-comment .comment-item .comment-item_sort {
+.page .movie-comment .comment-item .comment-item__sort {
   font-size: 0;
 }
-.page .movie-comment .comment-item .comment-item_sort span {
+.page .movie-comment .comment-item .comment-item__sort span {
   font-size: 14px;
+}
+.page .chosen-comment__item .item-avatal {
+  float: left;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.page .chosen-comment__item .item-avatal img {
+  width: 100%;
+}
+.page .chosen-comment__item .item-detail {
+  overflow: hidden;
+  padding-left: 0.3rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 0.4rem;
+}
+.page .chosen-comment__item .item-detail__hd div span {
+  vertical-align: middle;
+}
+.page .chosen-comment__item .item-detail__hd div .level {
+  display: inline-block;
+  width: 0.9735rem;
+  height: 0.4534rem;
+}
+.page .chosen-comment__item .item-detail__hd div .level img {
+  width: 100%;
+}
+.page .chosen-comment__item .item-detail__hd div .item-score__desc {
+  color: #9b9b9b;
+  font-size: 12px;
+}
+.page .chosen-comment__item .item-detail .item-detail__content {
+  margin: 0.15rem 0;
+}
+.page .chosen-comment__item .item-detail .item-detail__footer {
+  margin-top: 0.4rem;
+}
+.page .chosen-comment__item .item-detail .item-detail__footer .item-detail__time {
+  color: #9b9b9b;
+}
+.page .chosen-comment__item .item-detail .item-detail__footer .pull-right {
+  float: right;
+}
+.page .chosen-comment__item .item-detail .item-detail__footer .pull-right .link {
+  color: #757575;
+  border: 1px solid #eee;
+  margin-left: 0.3rem;
+  padding: 0.12rem 0.3rem 0.16rem;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+.page .chosen-comment__item .item-detail .item-detail__footer .pull-right .link .icon {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+}
+.page .chosen-comment__item .item-detail .item-detail__footer .pull-right .link span {
+  vertical-align: middle;
 }
 #toast {
   display: none;
