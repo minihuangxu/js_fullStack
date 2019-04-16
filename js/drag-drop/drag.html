@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 5px solid green;
+            margin-top: 30px;
+        }
+
+        .box:last-child {
+            margin-top: 30px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" id="box1" draggable="true">
+        <P>辣条</P>
+    </div>
+    <div class="box" id="box2" draggable="true">
+        <img src="http://ppsm0t3x8.bkt.clouddn.com/wonniu.jpg" alt="">
+    </div>
+    <script>
+        // dragstart drag dragend 源对象上 拖动的那个
+        // 目标对象 放的那个 dragenter dragover dragleave drop
+        //dragenter源对象进入目标对象的时候 1
+        //dragover 源对象进入目标对象的时候 n
+        //dragleave 源对象离开mbdx
+        //drop 放上去
+        const box1 = document.getElementById('box1');
+        const box2 = document.getElementById('box2');
+
+        const boxs = document
+            .querySelectorAll('.box');
+        let srcDiv = null;
+        for (let i = 0, length = boxs.length;
+            i < length; i++) {
+            let box = boxs[i];
+            box.addEventListener('dragstart',
+                function (event) {
+                    console.log('dragstart');
+                    srcDiv = this;
+                    // 源对象 目标对象
+                    // text/html 内容类型
+                    event.dataTransfer.setData('text/html',
+                        this.innerHTML);
+                    // a = 1 b = 2
+                })
+            box.addEventListener('drag', function () {
+                console.log('drag');
+            })
+            box.addEventListener('dragend', function () {
+                console.log('dragend');
+            })
+            // 目标对象
+            box.addEventListener('dragover', function (event) {
+                console.log('dragover');
+                event.preventDefault();
+            })
+            box.addEventListener('dragenter', function () {
+                console.log('dragenter');
+            })
+            box.addEventListener('dragleave', function () {
+                console.log('dragleave');
+            })
+            box.addEventListener('drop', function (event) {
+                console.log('drop');
+                // srcDiv 辣条 this：表情包
+                srcDiv.innerHTML = this.innerHTML;
+                this.innerHTML = event
+                    .dataTransfer.getData('text/html');
+            })
+        }
+    // box1.addEventListener('dragstart', function(event) {
+    //   // event.dat
+    // })
+
+    // box2.addEventListener('dragover',function(event) {
+    //   event.preventDefault();
+    // });
+    // box2.addEventListener('drop', function() {
+    //   this.innerHTML = box1.innerHTML;
+    // })
+    </script>
+</body>
+
+</html>
