@@ -1,0 +1,7 @@
+<view class="container battle-list">
+    <block wx:for="{{battle}}">
+        <view class="image-section">
+            <image style="width:200px;height:410px;background-color:#eeeeee" mode="aspectFit" src="{{item.src}}" />
+        </view>
+    </block>
+</view>

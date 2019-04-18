@@ -1,0 +1,9 @@
+Page({
+    data:{
+        battle:[
+            {
+                src:'./1.jpg'
+            }
+        ]
+    }
+})

@@ -1,0 +1,31 @@
+Page({
+    data:{
+        legends:[
+            {
+                name:'小乔',
+                title:'法师',
+                src:'https://game.gtimg.cn/images/yxzj/img201606/heroimg/106/106.jpg'
+            },
+            {
+                name:'虞姬',
+                title:'射手',
+                src:'https://game.gtimg.cn/images/yxzj/img201606/heroimg/174/174.jpg'
+            },
+            {
+                name:'花木兰',
+                title:'战士/刺客',
+                src:'https://game.gtimg.cn/images/yxzj/img201606/heroimg/154/154.jpg'
+            },
+            {
+                name:'大乔',
+                title:'坦克/辅助',
+                src:'https://game.gtimg.cn/images/yxzj/img201606/heroimg/191/191.jpg'
+            },
+            {
+                name:'露娜',
+                title:'法师/战士',
+                src:'https://game.gtimg.cn/images/yxzj/img201606/heroimg/146/146.jpg'
+            }
+        ]
+    }
+})
