@@ -1,8 +1,9 @@
 <view class="container legend-list">
-    <block wx:for="{{legends}}">
-        <view class="image-section">
-            <image style="width:80px;height:80px;background-color:#eeeeee" mode="aspectFit" src="{{item.src}}" />
-            <text >{{item.name}} {{item.title}}</text>
-        </view>
-    </block>
+    <!-- for 循环执行 -->
+   <block wx:for="{{legends}}" >
+       <view class="image-section">
+           <image style="width:80px; height:80px; background-color: #eeeeee" mode="aspectFit" src="{{item.src}}"/>
+       </view>
+       <text>{{item.name}} {{item.title}}</text>
+   </block>
 </view>
