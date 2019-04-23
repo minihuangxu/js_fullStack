@@ -1,2 +1,50 @@
-<!--pages/main/index.wxml-->
-<view class="container">首页</view>
+<!-- pages/main/index.wxml -->
+<view class="container">
+  <scroll-view>
+    <view class="header">
+      <view class="header_hd" bindtap="goLocaltion">
+        <text>{{city}}</text>
+        <view class="downtips"></view>
+      </view>
+      <view class="header_bd">
+        <view class="header_bd-hot header_bd-btn">正在上映</view>
+        <view class="header_bd-waiting header_bd-btn">即将上映</view>
+      </view>
+      <view class="header_ft">
+        <image src="../../images/icon_magnifier.png"></image>
+      </view>
+    </view>
+
+    <swiper indicator-dots="true" autoplay="true" interval="3000">
+      <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+        <swiper-item class="" item-id="">
+          <image class="" src="{{item}}"/> 
+        </swiper-item>
+      </block>   
+    </swiper>
+    <view wx:for="{{items}}" wx:key="{{index}}">
+      <view class="flex item" hover-class="gary_hover" hover-stay-time="100">
+        <view class="item_left">
+          <image src="{{item.imgUrl}}"/>
+        </view>
+        <view class="item_middle">
+          <view class="flex_auto">
+            <text class="title">{{item.name}}</text>
+          </view>
+          <view>
+            <view class="item_grade">
+              <text class="score" wx:if="{{item.isShow == 0}}">{{item.wantSee}}
+                <text style="font-size: 12px;">人想看</text>
+              </text>
+              <text class="score" wx:if="{{item.isShow == 1}}">{{item.grade}}
+                <text style="font-size: 12px;">分</text>
+              </text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+      
+  </scroll-view>
+</view>
