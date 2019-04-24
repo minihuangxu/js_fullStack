@@ -1,0 +1,14 @@
+<view class="map-box">
+    <map id="myMap" 
+    longitude="{{longitude}}"
+    latitude="{{latitude}}"
+    scale="{{scale}}"
+    markers="{{markers}}"
+    show-location='true'
+    bindmarkertap="toDrive"
+    polyline = "{{polyline}}">
+    <cover-image  src="../../images/point_in_map.png"class="map-icon_point"></cover-image>
+    <cover-image src="../../images/reset.png" class="map-icon map-icon_reset" bindtap="toLocation"></cover-image>
+      
+    </map>
+</view>
