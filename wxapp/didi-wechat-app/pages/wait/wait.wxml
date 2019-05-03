@@ -1,0 +1,43 @@
+<view class="container">
+  <view class="hd">
+    <view class="hd-img">
+      <image src="../../assets/images/remind.png"/>
+    </view>
+    <view class="hd-dec">
+      你的上车地点为
+      <text class="hd-desc__address">
+        [{{address}}]
+      </text>
+    </view>
+  </view>
+  <view class="bd">
+    <view class="bd-title">
+      <text class="title-maxdesx">
+        正在为你寻找车辆
+      </text>
+      <text class="title-mindesc">
+        每人一下步，更快更顺路
+      </text>
+    </view>
+    <view class="progress_box">
+      <canvas class="progress_bg" canvas-id="progressBg">
+
+      </canvas>
+      <canvas class="progress_canvas" canvas-id="progressCanvas">
+
+      </canvas>
+      <view class="progresss_text">
+        <text class="progress_info">
+          {{progressText}}
+        </text>
+        <text class="progress_time">
+          {{time}}
+        </text>
+      </view>
+    </view>
+  </view>
+  <view class="ft">
+    <view class="cancel" bindtap='handleCancel'>取消订单</view>
+    <view class="notcarpool" bindtap='handleBack'>不拼车</view>
+  </view>
+</view>

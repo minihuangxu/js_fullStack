@@ -1,0 +1,121 @@
+.container {
+    background-color: #f4f6f8;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  }
+  .hd {
+    width: 710rpx;
+    background: #fff;
+    font-size: 28rpx;
+    display: flex;
+    height: 100rpx;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20rpx;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 10px #e3e4e5;
+    border-radius: 5rpx;
+  }
+  .hd .hd-dec {
+    /* font-size: 28rpx; */
+  }
+  .hd-img image {
+    width: 50rpx;
+    height: 50rpx;
+    margin-right: 10rpx;
+    margin-top: 15rpx;
+  }
+  .hd-desc__address {
+    color: #fc9153;
+    font-size: 30rpx;
+  }
+  .bd {
+    margin-top: 30rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .bd-title {
+    color: #666;
+    margin: 20rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .title-maxdesx {
+    font-size: 30px;
+    padding-bottom: 20rpx;
+  }
+  .title-mindesc {
+    font-size: 30rpx;
+    text-align: center;
+  }
+  /* progress */
+  .progress_box {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .progress_bg {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+  }
+  .progress_canvas {
+    width: 220px;
+    height: 220px;
+  }
+  .progresss_text {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .progress_info {
+    font-size: 26rpx;
+    color: #666;
+    letter-spacing: 2rpx;
+    padding-bottom: 26rpx;
+  }
+  .progress_time {
+    font-size: 55rpx;
+    border-radius: 50px;
+    text-align: center;
+    color: #fc9153;
+  }
+  /* foot */
+  .ft {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 300rpx;
+    width: 710rpx;
+    height: 88rpx;
+    background-color: #fff;
+    box-shadow: 0 0  10rpx #e3e4e5;
+    text-align: center;
+    line-height: 88rpx;
+    color: #666;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20rpx;
+  }
+  .ft .cancel {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    border-right: 1px solid #eee;
+  }
+  .ft .notcarpool {
+    float: right;
+    width: 50%;
+  }
