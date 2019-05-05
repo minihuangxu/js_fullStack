@@ -1,0 +1,44 @@
+/**app.wxss**/
+@import "./style/reset.wxss";
+@import "./style/button.wxss";
+
+.section {
+  height: 100vh;
+}
+
+.content {
+  padding: 48rpx 48rpx 64rpx;
+}
+
+.center{
+  text-align: center;
+}
+
+.header {
+  font-size: 48rpx;
+  font-weight: bold;
+  letter-spacing: 2rpx;
+  margin-bottom: 48rpx;
+}
+
+.header::after {
+  content: "";
+  display: block;
+  width: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 2px solid #000;
+  padding-bottom: 8px;
+}
+
+.sub-header {
+  font-size: 32rpx;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.description, .meta {
+  margin-bottom: 8px;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 32rpx;
+}
