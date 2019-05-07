@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>URL</title>
+</head>
+<body>
+    <a href="?name=lilei&sex=female">
+        Search
+    </a>
+    <a href="?name=hanmeimei">
+        hanmeimei
+    </a>
+    <script>
+        const search = location.search;
+        console.log(search);
+        if (search) {
+            const paramsObj = new URLSearchParams(search);
+            console.log(paramsObj);
+            console.log(paramsObj.get('name'));
+        }
+        function getQueryString() {
+            // ?name=lilei&sex=female 
+            let obj = {};
+            const search = location.search.substr(1);
+            const searchArr = search.split(/&/g);
+            console.log(searchArr);
+            searchArr.forEach(item => {
+                const ret = item.split('=');
+                // ['name', 'lilei'];
+                obj[ret[0]] = ret[1];
+            })
+            // return {
+            //     name: 'lilei',
+            //     sex: 'female'
+            // }
+            return obj;
+        }
+        getQueryString();
+    </script>
+</body>
+</html>

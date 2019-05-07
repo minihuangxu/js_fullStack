@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib",
+    "pages/account/account",
+    "pages/chart/chart",
+    "pages/mine/mine",
+    "template/nav"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#000000",
+    "borderStyle": "white",
+    "backgroundColor": "#ededed",
+    "list": [
+      {
+        "text": "流水",
+        "pagePath": "pages/index/index",
+        "iconPath": "assest/icon/check.png",
+        "selectedIconPath": "assest/icon/check1.png"
+      },
+      {
+        "text": "账户",
+        "pagePath": "pages/account/account",
+        "iconPath": "assest/icon/account.png",
+        "selectedIconPath": "assest/icon/account1.png"
+      },
+      {
+        "text": "图表",
+        "pagePath": "pages/chart/chart",
+        "iconPath": "assest/icon/chart.png",
+        "selectedIconPath": "assest/icon/chart1.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/mine/mine",
+        "iconPath": "assest/icon/mine.png",
+        "selectedIconPath": "assest/icon/mine1.png"
+      }
+    ]
+  }
+}
