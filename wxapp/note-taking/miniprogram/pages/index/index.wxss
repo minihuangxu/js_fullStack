@@ -1,47 +1,38 @@
 .bg{
   width: 750rpx;
   height: 362rpx;
-}
-.month-num{
+  }
+  .month-num{
   font-size: 20px;
   color: aquamarine;
-  position: fixed;
+  position: absolute;
   margin-top: 104rpx;
   margin-left: 54rpx;
-}
-.month-txt{
+  }
+  .month-txt{
   font-size: 10px;
   color: white;
-  position: fixed;
+  position: absolute;
   margin-top: 122rpx;
   margin-left: 90rpx;
-}
-.month-sum{
+  }
+  .month-sum{
   font-size: 33px;
   color: white;
-  position: fixed;
+  position: absolute;
   margin-top: 164rpx;
   margin-left: 54rpx;
-}
-.month-sum::after{
-  content: '';
-  background-image:url(../../assest/icon/eye.png);
-  width: 45rpx;
-  height: 35rpx;
-}
-.add_btn{
-  width: 100%;
-  position: fixed;
-  bottom: 30rpx;
-}
-.btn{
-  margin-top: 30rpx;
-  width: 161rpx;
-  height: 75rpx;
-  font-size: 14px;
-  background: #14a1fd;
-  color: #fff;
-  text-align: center;
-  line-height: 75rpx;
-  border-radius: 40rpx;
-}
+  }
+  .defalut_btn{
+    width: 150rpx;
+    height: 100rpx;
+    font-size: 11px;
+  }
+  .flex{
+    width: 100%;
+    display: flex;
+    margin-bottom: 0;
+  }
+
+  
+  

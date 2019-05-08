@@ -6,10 +6,11 @@
   </view>
   <view class="month-sum">156.56</view>
   <view class="time-pay"></view>
-  <view class='add_btn'>
-    <button class='btn'>
-        记一笔
-    </button>
 </view>
 </view>
-</view>
+<import src="../../template/nav" />
+<view class="flex fix_nav_wp">
+<block wx:for="{{navData}}" wx:key="">
+    <template is="nav" data="{{...item}}"/>
+</block>
+</view> 
