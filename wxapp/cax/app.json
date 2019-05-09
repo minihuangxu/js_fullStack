@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/countdown/countdown",
+    "pages/index/index",
+    "pages/logs/logs",
+    "components/countdown/countdown"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  }
+}
