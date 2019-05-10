@@ -1,9 +1,12 @@
 {
   "pages": [
+    "pages/user/user",
+    "pages/orders/orders",
+    "pages/address/address",
     "pages/cart/cart",
     "pages/category/category",
-    "pages/index/index",
-    "pages/user/user"
+    "pages/index/index"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -45,5 +48,6 @@
         "text": "我的"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

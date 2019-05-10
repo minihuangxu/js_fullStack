@@ -7,7 +7,7 @@
         </view>
     </view>
     <scroll-view  class="category-right" scroll-y scroll-into-view="{{toView}}" 
-                  scroll-with-animation="{{true}}">
+                  scroll-with-animation="{{true}}" bindscroll="scrollTap">
 		<block wx:for="{{detail}}" wx:key="{{item.id}}">
 			<view class="cate-box" id="{{item.id}}">
 				<view class="cate-banner">
