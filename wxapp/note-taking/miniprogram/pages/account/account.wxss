@@ -1,1 +1,18 @@
-/* miniprogram/pages/account/account.wxss */
+.sumtxt{
+    font-size: 12px;
+    color: black;
+    margin-top: 80rpx;
+    position: absolute;
+    margin-left: 40rpx;
+}
+.sum{
+    font-size: 29px;
+    color: white;
+    margin-top: 116rpx;
+    position: absolute;
+    margin-left: 40rpx;
+}
+.bg{
+    width: 750rpx;
+    height: 286rpx;
+}

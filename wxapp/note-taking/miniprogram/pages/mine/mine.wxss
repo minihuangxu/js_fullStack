@@ -1,1 +1,74 @@
-/* miniprogram/pages/mine/mine.wxss */
+.header{
+    position: relative;
+    height: 180rpx;
+    line-height: 100rpx;
+    padding:30rpx 30rpx 30rpx 150rpx;
+    box-sizing: border-box;
+    background: #F6F6F6;
+    font-size: 28rpx;
+    color: blcak;
+}
+.header .thumb{
+    position: absolute;
+    left: 48rpx;
+    top:30rpx;
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 50%;
+}
+.header .nickname{
+    font-size: 23px;
+    color: black;
+    margin-left:  50rpx;
+    margin-top: 80rpx;
+}
+.middle{
+    width: 100%;
+    background-color: #fff;
+}
+.function{
+    width: 100%;
+    height: 120rpx;
+    border-bottom: 2px solid #F6F6F6;
+}
+.style1{
+    font-size: 16px;
+    color: black;
+    line-height: 115rpx;
+    margin-left: 20rpx;
+}
+.icon1{
+    float: left;
+    width: 40rpx;
+    height: 40rpx;
+    margin-left: 45px;
+    margin-top: 40rpx;
+}
+.footer{
+    height: 79rpx;
+    width: 371rpx;
+    margin-top: 48rpx;
+    border: 2px solid #f9c57b;
+    font-size: 14px;
+    color: #f4a21c;
+    text-align: center;
+    margin-left: 189rpx;
+    line-height: 75rpx;
+}
+.icon2{
+    float: left;
+    width: 40rpx;
+    height: 40rpx;
+    margin-left: 20rpx;
+    margin-top: 20rpx;
+}
+.arrow{
+    float: right;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #999;
+    border-right: 2px solid #999;
+    margin-right: 20px;
+    transform: rotate(45deg);
+    margin-top:20px;
+  }

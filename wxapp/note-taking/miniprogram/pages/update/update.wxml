@@ -1,0 +1,5 @@
+<!--miniprogram/pages/update/update.wxml-->
+<view class="bg">
+<image class="bg1" src="../../assest/images/update.jpg" />
+</view>
+

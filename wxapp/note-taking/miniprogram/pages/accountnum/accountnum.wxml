@@ -1,0 +1,4 @@
+<!--miniprogram/pages/accountnum/accountnum.wxml-->
+<view class="bg">
+<image class="bg1" src="../../assest/images/account.jpg" />
+</view>

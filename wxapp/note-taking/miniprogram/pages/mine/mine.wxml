@@ -1,0 +1,32 @@
+<view class="minepage">
+    <view class="header">
+        <open-data type="userAvatarUrl" class="thumb"></open-data>
+        <open-data type="userNickName" lang="zh_CN" class="nickname"></open-data> 
+    </view>
+    <view class="middle">
+        <view class="kindof function" bindtap="kindOf">
+            <view class="arrow"></view>
+            <image class="icon1" src="../../assest/icon/菜单.png" />              
+            <text class="style1">分类</text>
+        </view>
+        <view class="account function" bindtap="accountNum">
+            <view class="arrow"></view>
+            <image class="icon1" src="../../assest/icon/钱包.png" /> 
+            <text class="style1">账户</text>
+        </view>
+        <view class="updata function" bindtap="update">
+            <view class="arrow"></view>
+            <image class="icon1" src="../../assest/icon/云.png" /> 
+            <text class="style1">更新随手记</text>
+        </view>
+        <view class="above function" bindtap="above">
+            <view class="arrow"></view>
+            <image class="icon1" src="../../assest/icon/书2.png" /> 
+            <text class="style1">关于我们</text>
+        </view>
+    </view>
+    <view class="footer">
+        推荐随手记给好友
+        <image class="icon2" src="../../assest/icon/分享.png" />      
+    </view>
+</view>

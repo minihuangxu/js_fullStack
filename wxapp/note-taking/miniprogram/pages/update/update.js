@@ -1,11 +1,11 @@
-// miniprogram/pages/account/account.js
+// miniprogram/pages/update/update.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    sum: 4216.41
+
   },
 
   /**

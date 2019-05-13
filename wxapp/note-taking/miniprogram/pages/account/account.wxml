@@ -1,0 +1,6 @@
+<view class="chart">
+    <view class="bg" style=" background:url(../../assest/images/bg2.jpg) ">
+        <view class="sumtxt">净资产</view>
+        <view class="sum">{{sum}}</view>
+    </view>
+</view>
