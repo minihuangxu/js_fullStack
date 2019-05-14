@@ -1,0 +1,28 @@
+<!--components/calendar/calendar.wxml-->
+<view class="calendar">
+    <!-- 显示当前年月日 -->
+    <view class="calendar-title">
+        <view class="item ctrl" bindtap="lastMonth">{{lastMonth}}</view>
+        <view class="item title">{{title}}</view>
+        <view class="item ctrl" bindtap="nextMonth">{{nextMonth}}</view>
+        <view class="item ctrl today" bindtap="today">今天</view>
+    </view>
+    <!-- 遍历星期 -->
+    <view class="calendar-week">
+        <view class="item" wx:for="{{weekText}}" wx:key="{{item}}">{{item}}</view>
+    </view>
+    <view class="calendar-container">
+        <!-- 上一个月的占位容器 -->
+        <view class="grid gray" wx:for="{{emptyGridsBefore}}" wx:key="{{item}}">
+            {{item}}
+        </view>
+        <!-- 当月容器 -->
+        <view class="grid" wx:for="{{thisMonthDays}}" wx:key="{{index}}">
+            <view class="self" wx:if="{{format === year + '-' +item.monthFormat + '-' +item.dateFormat}}"></view>
+                <view class="wrap {{select === year + '-' +item.monthFormat + '-' +item.dateFormat ? 'select' : ''}}" bindtap="select" data-date="{{item.date}}">{{item.date}}</view>
+            
+        </view>
+        <!-- 下个月的占位容器 -->
+        <view class="grid gray" wx:for="{{emptyGridsAfter}}" wx:key="{{item}}">{{item}}</view>
+    </view>
+</view>

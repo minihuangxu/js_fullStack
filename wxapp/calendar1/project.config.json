@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -12,9 +12,9 @@
 		"autoAudits": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.6.6",
+	"libVersion": "2.7.0",
 	"appid": "wx70d5e3c5ece1819f",
-	"projectname": "didi-wechat-app",
+	"projectname": "calendar1",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
