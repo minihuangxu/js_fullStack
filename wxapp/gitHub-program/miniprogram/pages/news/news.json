@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "activities": "../../components/feeds/feeds"
+  }
 }

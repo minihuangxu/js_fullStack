@@ -4,8 +4,7 @@
     "pages/news/news",
     "pages/issues/issues",
     "pages/pulls/pulls",
-    "pages/me/me",
-    "components/trend-item/trend-item"
+    "pages/me/me"
   ],
   "window": {
     "backgroundColor": "#24292e",
@@ -52,5 +51,6 @@
         "selectedIconPath": "octicons/person.png"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

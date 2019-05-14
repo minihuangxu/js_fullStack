@@ -1,0 +1,6 @@
+<!--components/feedItem/feedItem.wxml-->
+<view class="feed">
+  <image class="avatar"
+  src="{{ item.actor.avatar_url }}s=50"
+  />
+</view>

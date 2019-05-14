@@ -4,7 +4,7 @@
   report-submit="{{ true }}" class="id">
     <button form-type="submit" class="borderless">
       <text class="name title">
-        {{ repo.author }} / {{repo.name}}
+        {{ repo.author }} / {{ repo.name }}
       </text>
       <text class="desc">
         {{ repo.description }}

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+   "loading": "../../miniprogram_npm/vant-weapp/loading/index",
+   "feed": "../feedItem/feedItem"
+  }
+}

@@ -1,0 +1,37 @@
+<view class="agenda">
+  <view class="date">
+    <view class="dateLeft" bindtap="turnLeft">
+      <image src="../../images/indextop/left1.png" />
+    </view>
+    <swiper current="{{ current }}" autoplay="{{false}}">  
+    <block wx:for="{{ gameDate }}" wx:key="{{ index }}">
+      <swiper-item>
+        <text class="time">{{ item.time }}</text>
+      </swiper-item>
+    </block>  
+    </swiper>   
+    <view class="dateRight" bindtap="turnRight">
+      <image src="../../images/indextop/right1.png" />
+    </view>
+  </view>
+  <view class="agenda-grade">
+    <view class="leftteam">
+      <image src="{{agenda.leftteam}}"></image>
+      <text>{{agenda.leftname}}</text>
+    </view>
+    <!-- <view class="leftgrade {{light==1?'on':''}}">{{agenda.leftgrade}}</view> -->
+    <view class="leftgrade {{agenda.leftgrade > agenda.rightgrade ? 'on' : ''}}">
+      {{agenda.leftgrade}}
+    </view>
+    <view class="Mid">-</view>
+    <!-- <view class="rightgrade {{light==1?'':'on'}}">{{agenda.rightgrade}}</view> -->
+    <view class="rightgrade {{agenda.rightgrade > agenda.leftgrade ? 'on' : ''}}">
+      {{agenda.rightgrade}}
+    </view>
+    <view class="rightteam">
+      <image src="{{agenda.rightteam}}"></image>
+      <text>{{agenda.rightname}}</text>
+    </view>
+  </view>
+
+</view>

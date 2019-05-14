@@ -1,4 +1,4 @@
-// components/trend-item/trend-item.js
+// components/trend-item.js
 Component({
   /**
    * 组件的属性列表

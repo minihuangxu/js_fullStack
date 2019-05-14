@@ -1,6 +1,5 @@
 /**app.wxss**/
-page{
+page {
   background-color: #24292e;
   color: #eee;
-  
 }
