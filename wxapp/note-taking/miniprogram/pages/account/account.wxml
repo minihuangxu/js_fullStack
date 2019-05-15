@@ -3,4 +3,28 @@
         <view class="sumtxt">净资产</view>
         <view class="sum">{{sum}}</view>
     </view>
+    <scroll-view class="typeof" scroll-y="{{true}}">
+    <view class="cash">
+        <text class="typeName">现金账户</text>
+        <view class="type" wx:for="{{ cash }}" wx:key="{{ index }}">
+            <view class="kindofName">{{cash.typeName}}</view>
+        </view>
+    </view>
+    <view class="finance">
+         <text class="typeName">金融账户</text>
+         <view class="type" wx:for="{{finance}}" wx:key="{{index}}">{{finance.typeName}}</view>
+    </view>
+    <view class="virtual">
+         <text class="typeName">虚拟账户</text>
+         <view class="type" wx:for="{{virtual}}" wx:key="{{index}}">{{virtual.typeName}}</view>
+    </view>
+    <view class="creditor">
+         <text class="typeName">债券账户</text>
+         <view class="type" wx:for="{{creditor}}" wx:key="{{index}}">{{creditor.typeName}}</view>
+    </view>
+    <view class="invest">
+         <text class="typeName">投资账户</text>
+         <view class="type" wx:for="{{invest}}" wx:key="{{index}}">{{invest.typeName}}</view>
+    </view>
+    </scroll-view>
 </view>

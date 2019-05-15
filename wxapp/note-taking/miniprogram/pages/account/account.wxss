@@ -16,3 +16,13 @@
     width: 750rpx;
     height: 286rpx;
 }
+.typeName{
+    font-size: 12px;
+    color: #8f8f8f;
+    height: 80rpx;
+}
+.type{
+    height: 120rpx;
+    font-size: 14px;
+    color: black;
+}
