@@ -4,27 +4,60 @@
         <view class="sum">{{sum}}</view>
     </view>
     <scroll-view class="typeof" scroll-y="{{true}}">
-    <view class="cash">
+    <view class="cash typePart">
+        <view class="title">
         <text class="typeName">现金账户</text>
+        </view>
         <view class="type" wx:for="{{ cash }}" wx:key="{{ index }}">
-            <view class="kindofName">{{cash.typeName}}</view>
+            <image src="{{item.typeIcon}}" class="Icon" />
+            <view class="kindofName">{{item.typeName}}</view>
+            <view class="kindofSum">{{item.typeSum}}</view>
+            <view class="arrow"></view>
         </view>
     </view>
-    <view class="finance">
+    <view class="finance typePart">
+        <view class="title">
          <text class="typeName">金融账户</text>
-         <view class="type" wx:for="{{finance}}" wx:key="{{index}}">{{finance.typeName}}</view>
+        </view>
+         <view class="type" wx:for="{{finance}}" wx:key="{{index}}">
+             <image src="{{item.typeIcon}}" class="Icon" />
+            <view class="kindofName">{{item.typeName}}</view>
+            <view class="kindofSum">{{ item.typeSum }}</view>
+            <view class="arrow"></view>
+         </view>
     </view>
-    <view class="virtual">
+    <view class="virtual typePart">
+        <view class="title">
          <text class="typeName">虚拟账户</text>
-         <view class="type" wx:for="{{virtual}}" wx:key="{{index}}">{{virtual.typeName}}</view>
+        </view>
+         <view class="type" wx:for="{{virtual}}" wx:key="{{index}}">
+             <image src="{{item.typeIcon}}" class="Icon" />
+            <view class="kindofName">{{item.typeName}}</view>
+            <view class="kindofSum">{{item.typeSum}}</view>
+            <view class="arrow"></view>
+         </view>
     </view>
-    <view class="creditor">
+    <view class="creditor typePart">
+        <view class="title">
          <text class="typeName">债券账户</text>
-         <view class="type" wx:for="{{creditor}}" wx:key="{{index}}">{{creditor.typeName}}</view>
+        </view>
+         <view class="type" wx:for="{{creditor}}" wx:key="{{index}}">
+             <image src="{{item.typeIcon}}" class="Icon" />
+            <view class="kindofName">{{item.typeName}}</view>
+            <view class="kindofSum">{{item.typeSum}}</view>
+            <view class="arrow"></view>
+         </view>
     </view>
-    <view class="invest">
+    <view class="invest typePart">
+        <view class="title">
          <text class="typeName">投资账户</text>
-         <view class="type" wx:for="{{invest}}" wx:key="{{index}}">{{invest.typeName}}</view>
+        </view>
+         <view class="type" wx:for="{{invest}}" wx:key="{{index}}">
+             <image src="{{item.typeIcon}}" class="Icon" />
+            <view class="kindofName">{{item.typeName}}</view>
+            <view class="kindofSum">{{item.typeSum}}</view>
+            <view class="arrow"></view>
+         </view>
     </view>
     </scroll-view>
 </view>

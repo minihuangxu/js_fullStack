@@ -16,13 +16,54 @@
     width: 750rpx;
     height: 286rpx;
 }
+.typePart{
+    border-bottom: 2px solid #ccc9c9;
+}
+.title{
+    height: 80rpx;
+    width: 100%;
+}
 .typeName{
     font-size: 12px;
     color: #8f8f8f;
-    height: 80rpx;
+    margin-left: 38rpx;
 }
 .type{
     height: 120rpx;
     font-size: 14px;
     color: black;
+    border-bottom: 0.5px solid #b9b9b9;
 }
+.Icon{
+    float: left;
+    width: 46rpx;
+    height: 46rpx;
+    margin-left: 53rpx;
+    margin-top: 40rpx;
+}
+.kindofName{
+    height: 30rpx;
+    float:left;
+    font-size: 14px;
+    color: black;
+    margin-left: 28rpx;
+    margin-top: 45rpx;
+}
+.kindofSum{
+    height: 24rpx;
+    font-size: 12px;
+    color: #424242;
+    float: right;
+    margin-right: 60rpx;
+    margin-top: 47rpx;
+}
+.arrow{
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid #999;
+    border-right: 2px solid #999;
+    right: 40rpx;
+    transform: rotate(45deg);
+    margin-top:28px;
+  }
