@@ -1,0 +1,23 @@
+<!-- index.wxml -->
+<view class="container">
+  <view class="gameBody">
+    <view class="heading">
+      <text class="title">2048</text>
+      <view class="scores-container">
+        <view class="score-container">{{score}}</view>
+        <view class="best-container">{{highscore}}</view>
+      </view>
+    </view>
+    <view class="game-container">
+      <view class="grid-container">
+        <view class="grid-row" wx:for="{{grids}}" wx:key="rowIndex" wx:for-index="rowIndex" wx:for-item="row">
+          <view class="grid-cell" wx:for="{{row}}" wx:key="colIndex" wx:for-index="colIndex" wx:for-item="cell">
+            <view class="tile">
+              <view class="tile-inner">{{cell.value}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
