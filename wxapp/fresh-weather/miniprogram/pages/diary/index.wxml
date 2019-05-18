@@ -3,7 +3,7 @@
   <view class="navigator" bindtap="goDiary">
     <icon type="edit" />
   </view>
-</view>
+
 
 <view class="container" id="canvas-wrapper" style="padding-top: {{paddingTop}}px">
   <view class="now">
@@ -12,4 +12,5 @@
       <text>{{ address }}</text>
     </view>
   </view>
+</view>
 </view>

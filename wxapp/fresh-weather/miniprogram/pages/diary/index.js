@@ -89,6 +89,18 @@ Page({
           address: name || address
         })
       }
-    },fail)
-  }
+    }, fail)
+  },
+  goDiary() {
+    wx.navigateTo({
+      url: '../index/index',
+      success: (result) => {
+
+      },
+      fail: () => { },
+      complete: () => { }
+    });
+
+  },
+
 })

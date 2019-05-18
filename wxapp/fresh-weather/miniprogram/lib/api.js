@@ -1,7 +1,7 @@
-const QQ_MAP_KEY = 'MWQBZ-JZTK2-NZ7U7-CFKJY-VZPJ6-NSBHA'
+const QQ_MAP_KEY = '2PFBZ-Y6SCP-NRLDX-VMDKW-5KXPJ-MWBYW'
 
 wx.cloud.init({
-    env: 'mini-572e66'
+    env: 'lingzi-af7b9e'
 })
 
 const db = wx.cloud.database()
@@ -38,6 +38,29 @@ export const getWeather = (lat, lon) => {
         data: {
             lat,
             lon
+        }
+    })
+}
+
+//往数据库里面查询到用户的openid 和具体的时间段，然后获取信息
+export const getEmotionByOpenidAndDate = (openid, year) =>{
+    coonst_ = db.command
+    year = parseInt(year)
+    month = parseInt(month)
+    let start = new Date(year, month - 1, 1).getTime()
+    let end = new Date(year, month, 1).getTime()
+    return db.collection('diary').where({
+        openid,
+        tsModified: _.get(start).and(_.lt(end))
+    })
+    .get()
+}
+
+export const jscode2session = (code) => {
+    return wx.cloud.callFunction({
+        name: 'jscode2session',
+        data: {
+            code
         }
     })
 }
