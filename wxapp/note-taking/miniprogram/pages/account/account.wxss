@@ -24,9 +24,11 @@
     width: 100%;
 }
 .typeName{
+    position: absolute;
     font-size: 12px;
     color: #8f8f8f;
     margin-left: 38rpx;
+    margin-top: 40rpx;
 }
 .type{
     height: 120rpx;
@@ -66,4 +68,11 @@
     right: 40rpx;
     transform: rotate(45deg);
     margin-top:28px;
+  }
+  .PartSum{
+      position: absolute;
+      font-size: 10px;
+      color: #8f8f8f;
+      margin-left: 155rpx;
+      margin-top:40rpx;
   }

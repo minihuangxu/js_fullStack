@@ -7,6 +7,7 @@
     <view class="cash typePart">
         <view class="title">
         <text class="typeName">现金账户</text>
+        <text class="PartSum">资产 {{cashSum}}</text>
         </view>
         <view class="type" wx:for="{{ cash }}" wx:key="{{ index }}">
             <image src="{{item.typeIcon}}" class="Icon" />
@@ -18,6 +19,7 @@
     <view class="finance typePart">
         <view class="title">
          <text class="typeName">金融账户</text>
+         <text class="PartSum">资产 {{financeSum}}</text>
         </view>
          <view class="type" wx:for="{{finance}}" wx:key="{{index}}">
              <image src="{{item.typeIcon}}" class="Icon" />
@@ -29,6 +31,7 @@
     <view class="virtual typePart">
         <view class="title">
          <text class="typeName">虚拟账户</text>
+         <text class="PartSum">资产 {{virtualSum}}</text>
         </view>
          <view class="type" wx:for="{{virtual}}" wx:key="{{index}}">
              <image src="{{item.typeIcon}}" class="Icon" />
@@ -40,6 +43,7 @@
     <view class="creditor typePart">
         <view class="title">
          <text class="typeName">债券账户</text>
+         <text class="PartSum">资产 {{creditorSum}}</text>
         </view>
          <view class="type" wx:for="{{creditor}}" wx:key="{{index}}">
              <image src="{{item.typeIcon}}" class="Icon" />
@@ -51,6 +55,7 @@
     <view class="invest typePart">
         <view class="title">
          <text class="typeName">投资账户</text>
+         <text class="PartSum">资产 {{investSum}}</text>
         </view>
          <view class="type" wx:for="{{invest}}" wx:key="{{index}}">
              <image src="{{item.typeIcon}}" class="Icon" />
