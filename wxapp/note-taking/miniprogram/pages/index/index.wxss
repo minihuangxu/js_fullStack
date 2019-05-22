@@ -33,6 +33,34 @@
     display: flex;
     margin-bottom: 0;
   }
-
+  .tab-wrapper{
+      position: absolute;
+      background: rgba(red, green, blue, 0);
+      width: 180rpx;
+      border-top: 1rpx solid #F6F6F6;
+      border-bottom: 1rpx solid #F6F6F6;
+      display: flex;
+      margin-top: 288rpx;
+      margin-left: 50rpx;
+  }
+  .tab-item{
+      display: inline-block;
+      flex: 1;
+      font-size: 32rpx;
+      text-align: center;
+      background: #fff;
+      color: #999;
+      padding: 12rpx 0;
+  }
+  .tab-item-active{
+      color: #323233;
+      border-bottom: 2px solid #000;
+  }
+  .show{
+      display: block;
+  }
+  .hide{
+      display: none;
+  }
   
   

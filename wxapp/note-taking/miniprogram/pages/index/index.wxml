@@ -1,10 +1,18 @@
 <view class="index">
-<view class="bg" style=" background:url(../../assest/images/bg1.jpg) ">
-  <view class="month-pay">
-    <view class="month-num">5</view>
-    <view class="month-txt">月 * 支出</view>
+  <view class="bg" style=" background:url(../../assest/images/bg1.jpg) ">
+    <view class="month-pay">
+      <view class="month-num">5</view>
+      <view class="month-txt">月 * 支出</view>
+    </view>
+    <view class="month-sum">{{monthSum}}</view>
+    <view class="tab-wrapper" bindtap="setActive">
+      <view class="tab-item {{isActive == 0 ? 'tab-item-active' : ''}}" data-index="0">日</view>
+      <view class="tab-item {{isActive == 1 ? 'tab-item-active' : ''}}" data-index="1">周</view>
+      <view class="tab-item {{isActive == 2 ? 'tab-item-active' : ''}}" data-index="2">月</view>
+      <view class="tab-item-line" animation="{{animationData}}"></view>
+    </view>
+    <view class="tab-content {{isActive == 0 ? 'show' : 'hide'}}">1</view>
+    <view class="tab-content {{isActive == 1 ? 'show' : 'hide'}}">2</view>
+    <view class="tab-content {{isActive == 2 ? 'show' : 'hide'}}">3</view>
   </view>
-  <view class="month-sum">{{monthSum}}</view>
-  <view class="time-pay"></view>
-</view>
 </view>
