@@ -2,14 +2,14 @@
     <div class="login">
         <div class="container">
             <p class="title">后台管理系统</p>
-            <div class="msg">
+            <div class="msg mt20">
               <el-input v-model="user" placeholder="请输入账号"></el-input>
             </div>
-            <div class="msg">
+            <div class="msg mt20">
               <el-input v-model="password" placeholder="请输入密码"></el-input>
             </div>
             <div class="btn mt20">
-              <el-button type="primary" @click="login">主要按钮</el-button>
+              <el-button type="primary" @click="login">登录</el-button>
             </div>
         </div>
     </div>
@@ -30,6 +30,12 @@ export default {
       if (this.user && this.password) {
         console.log(this.user)
         localStorage.setItem('userName', this.user)
+        // 字符串
+        // this.$router.push('/main')
+        // 对象
+        // this.$router.push({path: 'main'})
+        // 编程式跳转
+        this.$router.push({name: 'main', params: {userId: 1}})
       }
     }
   }
