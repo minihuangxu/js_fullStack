@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "koa": "^2.7.0"
+    "ejs": "^2.6.1",
+    "koa": "^2.7.0",
+    "koa-views": "^6.2.0"
   }
 }
