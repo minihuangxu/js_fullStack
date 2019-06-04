@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <div class="wendu">{{wendu}}</div>
+    <p class="suggestion">{{suggestion}}</p>
+    <div class="btn">
+      <button @click="add">add</button>
+      <button @click="reduce">reduce</button>
+    </div>
+  </div>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data () {
+        return {
+          wendu: 29,
+          suggestion: '亲亲这边是建议您穿短袖呢'
+        }
+      },
+      methods: {
+        add () {
+          this.wendu += 5
+        },
+        reduce () {
+          this.wendu -= 5
+        }
+      },
+      watch: {
+          wendu (newVal, oldVal) {
+            if (newVal >= 26) {
+              this.suggestion = '亲亲这边是建议您穿短袖呢'
+            } else if (newVal <26 && newVal >= 0) {
+              this.suggestion = '亲亲这边是建议您穿长袖的呢'
+            } else {
+              this.suggestion = '亲亲这边是建议您自杀的呢'
+            }
+          }
+        }
+    })
+  </script>
+</body>
+</html>
