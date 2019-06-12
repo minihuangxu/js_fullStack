@@ -1,8 +1,8 @@
 {
-  "name": "iview",
+  "name": "textscroll",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "wn <652501825@qq.com>",
+  "author": "huangbozhi <1044213015@qq.com>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
@@ -10,7 +10,6 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "iview": "^3.4.2",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },
