@@ -6,12 +6,12 @@
         <router-link to="/goods">商品</router-link>
       </div>
       <div class="tab-item">
-        <router-link to="ratings">评论</router-link>
+        <router-link to="/ratings">评论</router-link>
       </div>
       <div class="tab-item">
         <router-link to="/seller">商家</router-link>
       </div>
-    </div>
+      </div>
     <router-view></router-view>
   </div>
 </template>
@@ -33,7 +33,7 @@ export default {
   created () {
     this.$http.get('https://www.easy-mock.com/mock/5cbeb3c8d2955f5e587f933e/get')
       .then(res => {
-        // console.log(res)
+        console.log(res)
         if (res.data.errno === 0) {
           this.seller = Object.assign({}, this.seller, res.data.data)
         }
@@ -61,6 +61,6 @@ export default {
       color rgb(77, 85, 93)
       text-decoration none
 
-      &.active
+      &.router-link-exact-active
         color rgb(240, 20, 20)
 </style>
