@@ -1,0 +1,29 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "今天妖风好大啊",
+      "author": "天水碧"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "吹啊吹啊我的骄傲放纵",
+      "postId": 1
+    },
+    {
+      "body": "苍茫的天涯是我的爱",
+      "postId": "1",
+      "id": 2
+    },
+    {
+      "body": "hello world!!!!!!",
+      "postId": "1",
+      "id": 3
+    }
+  ],
+  "profile": {
+    "name": "mini"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "restful",
+  "version": "1.0.0",
+  "description": "- json 格式是标准的数据交换\r - 前后端开发， /api json格式来交流\r - 全栈",
+  "main": "index.js",
+  "scripts": {
+    "server":"json-server db.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.15.0"
+  }
+}
