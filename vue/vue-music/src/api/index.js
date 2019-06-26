@@ -52,5 +52,9 @@ export default {
   // 歌单详情
   SongList(params) {
     return fetchGet('playlist/detail', params)
+  },
+  // 歌曲搜索
+  MusicSearch (params) {
+    return fetchGet('/search', params)
   }
 }

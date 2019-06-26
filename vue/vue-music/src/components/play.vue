@@ -76,7 +76,7 @@ import { mapGetters } from 'vuex'
 export default {
   data() {
     return {
-      playing: false,
+      playing: true,
       playList: [1],
       currentSong: {},
       currentTime: 3,

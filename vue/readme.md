@@ -10,6 +10,7 @@
 - npm install stylus --save-dev 装stylus
 - npm install stylus-loader --save-dev stylus的预处理插件
 - npm install px2rem-loader --save-dev 使项目自适应不同尺寸大小的设备
+- yarn add element-ui 安装element-ui
 
 - vue自带的方法在new Vue里面声明，外来的用vue.use
 - stylus中提供&选择器,&指向父选择器，用于判断父元素达到某条件时改变状态 ---写动态样式时在被选中的样式前加一个&
