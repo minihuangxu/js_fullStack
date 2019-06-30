@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/noting/noting",
     "pages/index/index",
     "pages/account/account",
-    "pages/mine/mine",
-    "pages/noting/noting",
+    "pages/mine/mine",   
     "pages/above/above",
     "pages/kindof/kindof",
     "pages/accountnum/accountnum",

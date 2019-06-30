@@ -20,8 +20,8 @@ export default {
     }
   },
   methods: {
-    selectItem () {
-
+    selectItem (item) {
+      this.$emit(item)
     }
   }
 }

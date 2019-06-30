@@ -17,7 +17,7 @@
         <view class="updata function" bindtap="update">
             <view class="arrow"></view>
             <image class="icon1" src="../../assest/icon/云.png" /> 
-            <text class="style1">更新随手记</text>
+            <text class="style1">更新</text>
         </view>
         <view class="above function" bindtap="above">
             <view class="arrow"></view>
@@ -26,7 +26,7 @@
         </view>
     </view>
     <view class="footer">
-        推荐随手记给好友
+        推荐我们给好友
         <image class="icon2" src="../../assest/icon/分享.png" />      
     </view>
 </view>

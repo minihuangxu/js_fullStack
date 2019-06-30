@@ -1,2 +1,93 @@
-<!--miniprogram/pages/noting/noting.wxml-->
-<text>miniprogram/pages/noting/noting.wxml</text>
+<view class="wrapper">
+  <view class="tab-wrapper" bindtap="setActive">
+    <view class="tab-item {{isActive == 0 ? 'tab-item-active' : ''}}" data-index="0">支出</view>
+    <view class="tab-item {{isActive == 1 ? 'tab-item-active' : ''}}" data-index="1">收入</view>
+    <view class="tab-item {{isActive == 2 ? 'tab-item-active' : ''}}" data-index="2">转账</view>
+    <view class="tab-item-line" animation="{{animationData}}"></view>
+  </view>
+  <view class="tab-content {{isActive == 0 ? 'show' : 'hide'}}">
+    <view class="layout-top">
+      <view class="screen green">{{screenData}}</view>
+    </view>
+    <view class="outcome">
+      <view class="every" wx:for="{{outcome}}" wx:key="{{index}}">
+        <view class="imgWrapper" wx:for-index="{{index}}" bindtap="selectType" 
+        data-index="{{item.id}}" style='{{isSelect == index ? "border:1px solid #02ad7b;":"border: none; "}}'>
+          <image class="icon" src="{{item.icon}}" mode="aspectFit" bindtap="selectType">
+          </image>
+        </view>
+        <view class="type" wx:for-index="{{index}}" bindtap="selectType" 
+        data-index="{{item.id}}" style='{{isSelect == index ? "color: #02ad7b;":"border: none; "}}'>
+          {{item.type}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="tab-content {{isActive == 1 ? 'show' : 'hide'}}">
+    <view class="layout-top">
+      <view class="screen red">{{screenData}}</view>
+    </view>
+    <view class="income">
+      <view class="every" wx:for="{{income}}" wx:key="{{index}}">
+        <view class="imgWrapper" wx:for-index="{{index}}" bindtap="selectedType" 
+        data-index="{{item.id}}" style='{{isSelected == index ? "border:1px solid #ea69a0;":"border: none; "}}'>
+          <image class="icon" src="{{item.icon}}" mode="aspectFit" >
+          </image>
+        </view>
+        <view class="type" wx:for-index="{{index}}" bindtap="selectedType" 
+        data-index="{{item.id}}" style='{{isSelected == index ? "color: #ea69a0;":"border: none; "}}'>
+          {{item.type}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="tab-content {{isActive == 2 ? 'show' : 'hide'}}">
+    <view class="layout-top">
+      <view class="screen">{{screenData}}</view>
+    </view>
+  </view>
+  <view class="display-data">
+    <view class="display-type">
+      <image class="display-icon" src="../../assest/icon/菜单 (1).png" style="width: 40rpx; height: 40rpx" />
+      <view class="display1">{{currentType}}</view>
+      <view class="display2">分类</view>        
+    </view>
+    <view class="display-account">
+      <image class="display-icon" src="../../assest/icon/钱包 (1).png" style="width: 40rpx; height: 40rpx" /> 
+      <view class="display1">{{account}}</view>
+      <view class="display2">账户</view>
+    </view>
+    <view class="display-date">
+      <image class="display-icon" src="../../assest/icon/日历.png" style="width: 40rpx; height: 40rpx" /> 
+      <view class="display1">{{today}}</view>
+      <view class="display2">日期</view>
+    </view>
+  </view>
+  <view class="content">
+    <!-- 计算版面 -->
+    <view class="layout-bottom">
+      <view class="btnGroup">
+        <view class="item blue" bindtap="clickBtn" id="{{id9}}">9</view>
+        <view class="item blue" bindtap="clickBtn" id="{{id8}}">8</view>
+        <view class="item blue" bindtap="clickBtn" id="{{id7}}">7</view>
+        <view class="item orange" bindtap="clickBtn" id="{{idj}}">－</view>
+      </view>
+      <view class="btnGroup">
+        <view class="item blue" bindtap="clickBtn" id="{{id6}}">6</view>
+        <view class="item blue" bindtap="clickBtn" id="{{id5}}">5</view>
+        <view class="item blue" bindtap="clickBtn" id="{{id4}}">4</view>
+        <view class="item orange" bindtap="clickBtn" id="{{idadd}}">+</view>
+      </view>
+      <view class="btnGroup">
+        <view class="item blue" bindtap="clickBtn" id="{{id3}}">3</view>
+        <view class="item blue" bindtap="clickBtn" id="{{id2}}">2</view>
+        <view class="item blue" bindtap="clickBtn" id="{{id1}}">1</view>
+        <view class="item orange" bindtap="clickBtn" id="{{ide}}">=</view>
+      </view>
+      <view class="btnGroup">
+        <view class="item blue " bindtap="clickBtn" id="{{idc}}">C</view>
+        <view class="item blue " bindtap="clickBtn" id="{{id0}}">0</view>
+        <view class="item blue" bindtap="clickBtn" id="{{idd}}">.</view>
+        <view class="item orange" bindtap="save" id="{{ids}}">保存</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -2,7 +2,7 @@
   <div class="search">
     <div class="search-box-wrapper">
       <!-- 搜索框 -->
-      <v-searchBox @query="onQueryChange"></v-searchBox>
+      <v-searchBox @query="onQueryChange" ref="searchBox"></v-searchBox>
     </div>
     <div class="shortcut-wrapper" ref="shortcutWrapper" v-show="!query">
       <v-scroll class="shortcut" ref="shortcut" :data="shortcut" :refreshDelay="refreshDelay">
@@ -29,13 +29,13 @@
             </span>
           </h1>
           <!-- 搜索历史列表 -->
-          <v-searchList :searches="searchHistory"></v-searchList>
+          <v-searchList :searches="searchHistory" @select="addQuery"></v-searchList>
         </div>
       </v-scroll>
     </div>
     <!-- 搜索结果 -->
     <div class="search-result" v-show="query" ref="searchResult">
-      <v-suggest :query="query"></v-suggest>
+      <v-suggest :query="query" @listScroll="blurInput" @select="saveSearch" ref="suggest"></v-suggest>
     </div>
   </div>
 </template>
@@ -45,35 +45,43 @@ import searchBox from '../searchBox'
 import scroll from '../scroll'
 import searchList from '../searchList'
 import suggest from '../suggest'
+import api from '@/api'
+import { mapGetters } from 'vuex'
+import { searchMixin } from '@/common/mixin.js'
 export default {
   data () {
     return {
       query: '',
-      hotKey: [
-        {first: 'mini'},
-        {first: 'Versace'},
-        {first: 'SW'},
-        {first: 'EL'},
-        {first: 'MK'},
-      ],
+      hotKey: [],
       shortcut: [],
       refreshDelay: 3,
-      searchHistory: ['12']
     }
   },
   methods: {
     showConfirm () {},
-    onQueryChange(query) {
-      //console.log(query)
-      this.query = query
+    _getHotKey () {
+      api.HotSearchKey().then((res) => {
+        if (res.code === 200) {
+          this.hotKey = res.result.hots.slice(0, 10)
+        }
+      })
     }
+  },
+  computed: {
+    ...mapGetters([
+      'searchHistory'
+    ])
+  },
+  created () {
+    this._getHotKey()
   },
   components: {
     'v-searchBox':searchBox,
     'v-scroll':scroll,
     'v-searchList':searchList,
     'v-suggest': suggest
-  }
+  },
+  mixins: [searchMixin],
 }
 </script>
 

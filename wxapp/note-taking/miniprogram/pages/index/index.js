@@ -4,28 +4,32 @@ Page({
     * 页面的初始数据
     */
   data: {
-    monthSum: '239.90',
-    isActive: 1,
-    isLoading: false,
-    animationData: {},
+    monthSum: '',
+    records: [
+        {recordIcon: '../../assest/icon/米饭.png', recordName: '早午晚餐', recordNote: '晚餐', recordNum: '9.00', recordDate:'26/06/2019', income: false},
+        {recordIcon: '../../assest/icon/冰淇淋.png', recordName: '水果零食', recordNote: '水果', recordNum: '13.60', recordDate:'26/06/2019', income: false},
+        {recordIcon: '../../assest/icon/红包.png', recordName: '礼金收入', recordNote: '红包', recordNum: '50.00', recordDate:'24/06/2019', income: true},
+        {recordIcon: '../../assest/icon/米饭.png', recordName: '早午晚餐', recordNote: '晚餐', recordNum: '6.40', recordDate:'26/06/2019', income: false},
+        {recordIcon: '../../assest/icon/汽车.png', recordName: '打车租车', recordNote: '打车', recordNum: '23.30', recordDate:'25/06/2019', income: false},
+        {recordIcon: '../../assest/icon/米饭.png', recordName: '早午晚餐', recordNote: '午餐', recordNum: '9.00', recordDate:'25/06/2019', income: false},
+        {recordIcon: '../../assest/icon/家具.png', recordName: '日常用品', recordNote: '纸巾', recordNum: '19.60', recordDate:'24/06/2019', income: false},
+        {recordIcon: '../../assest/icon/米饭.png', recordName: '早午晚餐', recordNote: '早餐', recordNum: '3.50', recordDate:'24/06/2019', income: false}
+      ],
   },
-  setActive: function(e){
-    console.log("---",e);
-    var index = e.target.dataset.index;
-    // 初始化动画数据
-    var animation = wx.createAnimation({
-      duration: 500,
-      timingFunction: 'ease-out',
-      delay: 0
-  });
-  // 距离左边位置
-  animation.left((index * 250) + 'rpx').step()
-  // 设置动画
-  this.setData({
-      animationData: animation.export()
-  });
-  this.setData({
-    isActive: index,
-  })
+  onShow: function () {
+    this.setData({
+    
+    })
+    this.getSum()
   },
+  getSum () {
+    let record = this.data.records;
+    let sum = 0;
+    for(let i = 0; i < record.length; i++) {
+      sum += record[i].recordNum * 1
+    }
+    this.setData({
+      monthSum: sum.toFixed(2)
+    })
+  }
 })
