@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 关于call， bind， apply -->
+  <script>
+    var a = {
+      user: 'mini',
+      fn: function (n) {
+        console.log(this.user)
+        console.log(n + 1)
+      }
+    }
+     var b = a.fn
+    // b.call(a, 5)
+    //b.apply(a, [9])
+    var c = b.bind(a, 1)
+    c();
+    // call方法的实现原理
+    Function.prototype.call = function () {
+      let [thisArg, ...args] = [...arguments]
+      if (!thisArg) {
+        thisArg = typeof window === 'undefind' ? global : window
+      }
+      // this的指向是当前函数  func.call
+      thisArg.func = this
+      // 执行函数
+      let result = thisArg.func(...args)
+      delete thisArg.func(...args)  //thisArgs上并没有 func 属性，因此需要移除
+      return result
+    }
+  </script>
+</body>
+</html>

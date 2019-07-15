@@ -159,7 +159,7 @@ export default {
       isPureMusic: false,
       currentLyric: null,
       duration: 0,
-      playingLyric: '我叹服你的技巧',
+      playingLyric: '',
       currentLineNum: 0,
       currentShow: 'cd'
     }

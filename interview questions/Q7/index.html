@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let a = 'hello',
+      b = 123,
+      c = true,
+      d = undefined,
+      e = null,
+      // ------
+      f = {},
+      g = [],
+      h = function () { };
+
+
+      // console.log(typeof(g))
+      // console.log(g instanceof Array)
+
+      // 显式原型 prototype  隐式原型__proto__
+
+      function Student(name) {
+        this.name = name 
+      }
+      Student.prototype.Setage = function () {
+        this.age = 18
+      }
+      let wn = new Student('wn')
+      // console.log(wn.__proto__)
+      // console.log(Student.prototype)
+      // wn.__proto__ = Student.prototype
+      
+      // instanceof 原理
+      function instance_of (L, R) {
+        let o = R.prototype
+        L = L.__proto__
+        while (true) {
+          if (L === null) {  //已经找到顶了
+            return false
+          }
+          if (o === L) {
+            return true
+          }
+          L = L.__proto__
+        }
+      }
+      // console.log(instance_of([], Array))
+
+      //准确的判断数据类型
+
+      Object.prototype.toString.call()
+
+      //首先它会取得对象一个内部属性
+      //然后依据这个内部属性返回一个'[object Array]'
+      //然后 .call将作用域放到[object Array]里面去，我们就可以取到任何对象的内部属性
+      //然后把类型检测转化为字符串比较，达到目的
+
+      console.log(Object.prototype.toString.call([])) 
+  </script>
+</body>
+</html>
