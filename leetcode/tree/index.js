@@ -4,7 +4,6 @@ function TreeNode(val) {
 }
 
 let a1 = new TreeNode(3);
-
 let a2 = new TreeNode(9);
 let a3 = new TreeNode(20);
 let a4 = new TreeNode(7);

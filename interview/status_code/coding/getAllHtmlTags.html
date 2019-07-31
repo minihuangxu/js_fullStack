@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+  <script>
+    function getAllHtmlTags() {
+      const tags = [...document.querySelectorAll('*')].map(dom => dom.tagName);
+      // 统计出现的频率
+      const mapper = {}
+      for (let i = 0; i < tags.length; i++) {
+        const tag = tags[i]
+        if (mapper[tag] === void 0) {
+          mapper[tag] = 1;
+        } else {
+          mapper[tag] += 1
+        }
+      }
+      return Object.entries(mapper).sort((a, b) =>　b[1] - a[1]).map(q => q[0])
+    }
+    console.log(getAllHtmlTags());
+  </script>
+</body>
+</html>
